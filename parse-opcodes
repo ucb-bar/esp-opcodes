@@ -28,7 +28,24 @@ arglut['bimm12lo'] = (11,7)
 arglut['zimm'] = (19,15)
 arglut['shamt'] = (25,20)
 arglut['shamtw'] = (24,20)
-arglut['vseglen'] = (31,29)
+
+arglut['svrs1'] = (23,17)
+arglut['svss1'] = (21,17)
+arglut['svrd'] = (13,7)
+
+arglut['vseglen'] = (42,40)
+arglut['vrd'] = (18,12)
+arglut['vrs1'] = (28,22)
+arglut['vrs2'] = (35,29)
+arglut['vrs3'] = (42,38)
+arglut['vshamt'] = (34,29)
+arglut['vshamtw'] = (33,29)
+arglut['vimm12'] = (40,29)
+arglut['vimm20'] = (38,19)
+arglut['vimm12lo'] = (16,12)
+arglut['vimm12hi'] = (42,36)
+arglut['vaqrl'] = (39,38)
+arglut['vrm']   = (21,19)
 
 arglut['crd'] = (9,5)
 arglut['crs2'] = (9,5)
@@ -734,8 +751,8 @@ for line in sys.stdin:
     else:
       sys.exit("%s: unknown token %s" % (name,token))
 
-  if not (cover == 0xFFFFFFFF or cover == 0xFFFF):
-    sys.exit("%s: not all bits are covered" % name)
+  if not (cover == 0xFFFFFFFFFFFFFFFF or cover == 0xFFFFFFFF or cover == 0xFFFF):
+    sys.exit("%s: not all bits are covered(%x)" % (name,cover))
 
   if not pseudo:
     for name2,match2 in match.iteritems():
