@@ -7,302 +7,322 @@
 # <args> is one of rd, rs1, rs2, rs3, imm25, imm20, imm12, imm12lo, imm12hi,
 # shamtw, shamt, rm
 
-# vector scalar instructions
-stop    63..43=0 42..36=0 35..29=0 28..22=0 21..19=5 18..12=0 11..7=0x1D 6..0=0x3f
-utidx   63..43=0 42..36=0 35..29=0 28..22=0 21..19=6 vrd      11..7=0x1D 6..0=0x3f
-movz    63..43=0 42..36=0 vrs2     vrs1     21..19=7 vrd      11..7=0x1D 6..0=0x3f
-movn    63..43=0 42..36=1 vrs2     vrs1     21..19=7 vrd      11..7=0x1D 6..0=0x3f
-fmovz   63..43=0 42..36=2 vrs2     vrs1     21..19=7 vrd      11..7=0x1D 6..0=0x3f
-fmovn   63..43=0 42..36=3 vrs2     vrs1     21..19=7 vrd      11..7=0x1D 6..0=0x3f
+# vector misc instructions
+stop    63..60=0 59..53=0 52..50=5 49..41=0 40..33=0 32=0 31..24=0 23..16=0 15..12=0 11..7=0x1D 6..0=0x3f
+eidx    63..60=0 59..53=0 52..50=6 49..41=0 40..33=0 32=0 31..24=0 vrd      15..12=0 11..7=0x1D 6..0=0x3f
+movz    63..60=0 59..53=0 52..50=7 49..41=0 vrs2     32=0 vrs1     vrd      15..12=0 11..7=0x1D 6..0=0x3f
+movn    63..60=0 59..53=1 52..50=7 49..41=0 vrs2     32=0 vrs1     vrd      15..12=0 11..7=0x1D 6..0=0x3f
+fmovz   63..60=0 59..53=2 52..50=7 49..41=0 vrs2     32=0 vrs1     vrd      15..12=0 11..7=0x1D 6..0=0x3f
+fmovn   63..60=0 59..53=3 52..50=7 49..41=0 vrs2     32=0 vrs1     vrd      15..12=0 11..7=0x1D 6..0=0x3f
+
+#vector control-flow
+vcbranch     vcimm vcond vn 31..16=0           vpred 11..7=0x18 6..0=0x3f
+
+vjal        vcimm vcond vn 31..24=0   vrd     vpred 11..7=0x1B 6..0=0x3f
+vjalr       vcimm vcond vn vrs1       vrd     vpred 11..7=0x19 6..0=0x3f
+
+#vector scalar instructions
+vlui        vimm 31..24=0             vrd 15..12=0  11..7=0x0D 6..0=0x3f
+vauipc      vimm 31..24=0             vrd 15..12=0  11..7=0x05 6..0=0x3f
+
+vaddi       vimm                 vrs1 vrd 15..12=0  11..7=0x04 6..0=0x3f
+vslti       vimm                 vrs1 vrd 15..12=2  11..7=0x04 6..0=0x3f
+vsltiu      vimm                 vrs1 vrd 15..12=3  11..7=0x04 6..0=0x3f
+vandi       vimm                 vrs1 vrd 15..12=7  11..7=0x04 6..0=0x3f
+vori        vimm                 vrs1 vrd 15..12=6  11..7=0x04 6..0=0x3f
+vxori       vimm                 vrs1 vrd 15..12=4  11..7=0x04 6..0=0x3f
+vslli       63..38=0      vshamt vrs1 vrd 15..12=1  11..7=0x04 6..0=0x3f
+vsrli       63..38=0      vshamt vrs1 vrd 15..12=5  11..7=0x04 6..0=0x3f
+vsrai       63=1 62..38=0 vshamt vrs1 vrd 15..12=5  11..7=0x04 6..0=0x3f
+
+vaddi       vimm                  vrs1 vrd 15..12=0  11..7=0x06 6..0=0x3f
+vslli       63..37=0      vshamtw vrs1 vrd 15..12=1  11..7=0x06 6..0=0x3f
+vsrli       63..37=0      vshamtw vrs1 vrd 15..12=5  11..7=0x06 6..0=0x3f
+vsrai       63=1 62..37=0 vshamtw vrs1 vrd 15..12=5  11..7=0x06 6..0=0x3f
+
+#vector predicate loads and stores
+#                            pred/data                                 opcode
+#                            |                                         |
+vpl         63..61=4 60..50=0 49=1 48..32=0 vrs1 23..21=0 vprd 15..12=0 11..7=0x16 6..0=0x3f
+vps         63..61=4 60..50=0 49=1 48..32=0 vrs1 23..21=0 vprd 15..12=0 11..7=0x1E 6..0=0x3f
+
+#vector predicate compares
+#                             funct7    funct3  p/d
+vcmpeq      63=1 vs1 vs2 60=0 59..53=0 52..50=0 49=1 48..41=0 vrs2 vn vrs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vcmpne      63=1 vs1 vs2 60=0 59..53=0 52..50=1 49=1 48..41=0 vrs2 vn vrs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vcmplt      63=1 vs1 vs2 60=0 59..53=0 52..50=4 49=1 48..41=0 vrs2 vn vrs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vcmpge      63=1 vs1 vs2 60=0 59..53=0 52..50=5 49=1 48..41=0 vrs2 vn vrs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vcmpltu     63=1 vs1 vs2 60=0 59..53=0 52..50=6 49=1 48..41=0 vrs2 vn vrs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vcmpgeu     63=1 vs1 vs2 60=0 59..53=0 52..50=7 49=1 48..41=0 vrs2 vn vrs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+
+#vector predicate logical ops
+#                             funct7   funct3  p/d
+vpxorxor    63=1 vs1 vs2 vs3 59..53=4 52..50=4 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vpxoror     63=1 vs1 vs2 vs3 59..53=6 52..50=4 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vpxorand    63=1 vs1 vs2 vs3 59..53=7 52..50=4 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vporxor     63=1 vs1 vs2 vs3 59..53=4 52..50=6 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vporor      63=1 vs1 vs2 vs3 59..53=6 52..50=6 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vporand     63=1 vs1 vs2 vs3 59..53=7 52..50=6 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vpandxor    63=1 vs1 vs2 vs3 59..53=4 52..50=7 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vpandor     63=1 vs1 vs2 vs3 59..53=6 52..50=7 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+vpandand    63=1 vs1 vs2 vs3 59..53=7 52..50=7 49=1 48..46=0 vprs3 40..38=0 vprs2 vn 31..29=0 vprs1 23..21=0 vprd vpred 11..7=0x0C 6..0=0x3f
+
 
 # vector loads and stores
-#
-# 64bit rocc format, xd = inst[21], xs1 = inst[20], xs2 = inst[19]
-#
-#                               3=d
-#                               2=w
-#                     1=f  1=u  1=h                   0    1    1=strided
-#            3-bits   0=x  0=s  0=b                   0    1    0=unit-strided
+#                                        3=d
+#                                        2=w
+#                              1=f  1=u  1=h        1=strided     
+#                     3-bits   0=x  0=s  0=b        0=unit-strided
 #            ---------------------------------------------------------------------------
-#            unused   segment  x/f  s/u  width                 xd   xs1  xs2      opcode
-#            |        |        |    |    |                     |    |    |        |
-vlsegd      63..43=0 vseglen  39=0 38=0 37..36=3 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vlsegw      63..43=0 vseglen  39=0 38=0 37..36=2 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vlsegwu     63..43=0 vseglen  39=0 38=1 37..36=2 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vlsegh      63..43=0 vseglen  39=0 38=0 37..36=1 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vlseghu     63..43=0 vseglen  39=0 38=1 37..36=1 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vlsegb      63..43=0 vseglen  39=0 38=0 37..36=0 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vlsegbu     63..43=0 vseglen  39=0 38=1 37..36=0 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vflsegd     63..43=0 vseglen  39=1 38=0 37..36=3 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
-vflsegw     63..43=0 vseglen  39=1 38=0 37..36=2 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x16 6..0=0x3f
+#                   segment  unused   x/f  s/u  width    strided                         opcode
+#                   |        |        |    |    |        |                               |
+vlsegd      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=3 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegw      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=2 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegwu     63..61=4 vseglen 49..46=0 45=0 44=1 43..42=2 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegh      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=1 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlseghu     63..61=4 vseglen 49..46=0 45=0 44=1 43..42=1 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegb      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=0 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegbu     63..61=4 vseglen 49..46=0 45=0 44=1 43..42=0 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vflsegd     63..61=4 vseglen 49..46=0 45=1 44=0 43..42=3 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vflsegw     63..61=4 vseglen 49..46=0 45=1 44=0 43..42=2 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
 
-#            unused   segment  x/f  s/u  width                 xd   xs1  xs2      opcode
-#            |        |        |    |    |                     |    |    |        |
-vlsegstd    63..43=0 vseglen  39=0 38=0 37..36=3 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vlsegstw    63..43=0 vseglen  39=0 38=0 37..36=2 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vlsegstwu   63..43=0 vseglen  39=0 38=1 37..36=2 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vlsegsth    63..43=0 vseglen  39=0 38=0 37..36=1 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vlsegsthu   63..43=0 vseglen  39=0 38=1 37..36=1 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vlsegstb    63..43=0 vseglen  39=0 38=0 37..36=0 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vlsegstbu   63..43=0 vseglen  39=0 38=1 37..36=0 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vflsegstd   63..43=0 vseglen  39=1 38=0 37..36=3 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
-vflsegstw   63..43=0 vseglen  39=1 38=0 37..36=2 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x16 6..0=0x3f
+#                   segment  unused   x/f  s/u  width    strided                         opcode
+#                   |        |        |    |    |        |                               |
+vlsegstd    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegstw    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegstwu   63..61=4 vseglen 49..46=0 45=0 44=1 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegsth    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegsthu   63..61=4 vseglen 49..46=0 45=0 44=1 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegstb    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegstbu   63..61=4 vseglen 49..46=0 45=0 44=1 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vflsegstd   63..61=4 vseglen 49..46=0 45=1 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vflsegstw   63..61=4 vseglen 49..46=0 45=1 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
 
-#            unused   segment  x/f  s/u  width                 xd   xs1  xs2      opcode
-#            |        |        |    |    |                     |    |    |        |
-vssegd      63..43=0 vseglen  39=0 38=0 37..36=3 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x1E 6..0=0x3f
-vssegw      63..43=0 vseglen  39=0 38=0 37..36=2 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x1E 6..0=0x3f
-vssegh      63..43=0 vseglen  39=0 38=0 37..36=1 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x1E 6..0=0x3f
-vssegb      63..43=0 vseglen  39=0 38=0 37..36=0 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x1E 6..0=0x3f
-vfssegd     63..43=0 vseglen  39=1 38=0 37..36=3 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x1E 6..0=0x3f
-vfssegw     63..43=0 vseglen  39=1 38=0 37..36=2 35..29=0 vrs1 21=0 20=1 19=0 vrd 11..7=0x1E 6..0=0x3f
+#                   segment  unused   x/f  s/u  width    strided                         opcode
+#                   |        |        |    |    |        |                               |
+vssegd      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=3 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegw      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=2 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegh      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=1 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegb      63..61=4 vseglen 49..46=0 45=0 44=0 43..42=0 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vfssegd     63..61=4 vseglen 49..46=0 45=1 44=0 43..42=3 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vfssegw     63..61=4 vseglen 49..46=0 45=1 44=0 43..42=2 41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
 
-#            unused   segment  x/f  s/u  width                 xd   xs1  xs2      opcode
-#            |        |        |    |    |                     |    |    |        |
-vssegstd    63..43=0 vseglen  39=0 38=0 37..36=3 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x1E 6..0=0x3f
-vssegstw    63..43=0 vseglen  39=0 38=0 37..36=2 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x1E 6..0=0x3f
-vssegsth    63..43=0 vseglen  39=0 38=0 37..36=1 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x1E 6..0=0x3f
-vssegstb    63..43=0 vseglen  39=0 38=0 37..36=0 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x1E 6..0=0x3f
-vfssegstd   63..43=0 vseglen  39=1 38=0 37..36=3 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x1E 6..0=0x3f
-vfssegstw   63..43=0 vseglen  39=1 38=0 37..36=2 vrs2     vrs1 21=0 20=1 19=1 vrd 11..7=0x1E 6..0=0x3f
+#                   segment  unused   x/f  s/u  width    strided                         opcode
+#                   |        |        |    |    |        |                               |
+vssegstd    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegstw    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegsth    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegstb    63..61=4 vseglen 49..46=0 45=0 44=0 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vfssegstd   63..61=4 vseglen 49..46=0 45=1 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vfssegstw   63..61=4 vseglen 49..46=0 45=1 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
 
-#scalar
-vlui       63..39=0                          vimm20 vrd      11..7=0x0D 6..0=0x3f
-vauipc     63..39=0                          vimm20 vrd      11..7=0x05 6..0=0x3f
+#indexed vector load and stores
+#                   segment  unused   x/f  s/u  width    strided                         opcode
+#                   |        |        |    |    |        |                               |
+vlsegxd     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegxw     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegxwu    63..61=5 vseglen 49..46=0 45=0 44=1 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegxh     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegxhu    63..61=5 vseglen 49..46=0 45=0 44=1 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegxb     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vlsegxbu    63..61=5 vseglen 49..46=0 45=0 44=1 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vflsegxd    63..61=5 vseglen 49..46=0 45=1 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+vflsegxw    63..61=5 vseglen 49..46=0 45=1 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
 
-vaddi      63..41=0 vimm12            vrs1 21..19=0 vrd      11..7=0x04 6..0=0x3f
-vslli      63..41=0 40..35=0  vshamt  vrs1 21..19=1 vrd      11..7=0x04 6..0=0x3f
-vslti      63..41=0 vimm12            vrs1 21..19=2 vrd      11..7=0x04 6..0=0x3f
-vsltiu     63..41=0 vimm12            vrs1 21..19=3 vrd      11..7=0x04 6..0=0x3f
-vxori      63..41=0 vimm12            vrs1 21..19=4 vrd      11..7=0x04 6..0=0x3f
-vsrli      63..41=0 40..35=0  vshamt  vrs1 21..19=5 vrd      11..7=0x04 6..0=0x3f
-vsrai      63..41=0 40..35=16 vshamt  vrs1 21..19=5 vrd      11..7=0x04 6..0=0x3f
-vori       63..41=0 vimm12            vrs1 21..19=6 vrd      11..7=0x04 6..0=0x3f
-vandi      63..41=0 vimm12            vrs1 21..19=7 vrd      11..7=0x04 6..0=0x3f
-
-vadd       63..43=0 42..36=0  vrs2    vrs1 21..19=0 vrd      11..7=0x0C 6..0=0x3f
-vsub       63..43=0 42..36=32 vrs2    vrs1 21..19=0 vrd      11..7=0x0C 6..0=0x3f
-vsll       63..43=0 42..36=0  vrs2    vrs1 21..19=1 vrd      11..7=0x0C 6..0=0x3f
-vslt       63..43=0 42..36=0  vrs2    vrs1 21..19=2 vrd      11..7=0x0C 6..0=0x3f
-vsltu      63..43=0 42..36=0  vrs2    vrs1 21..19=3 vrd      11..7=0x0C 6..0=0x3f
-vxor       63..43=0 42..36=0  vrs2    vrs1 21..19=4 vrd      11..7=0x0C 6..0=0x3f
-vsrl       63..43=0 42..36=0  vrs2    vrs1 21..19=5 vrd      11..7=0x0C 6..0=0x3f
-vsra       63..43=0 42..36=32 vrs2    vrs1 21..19=5 vrd      11..7=0x0C 6..0=0x3f
-vor        63..43=0 42..36=0  vrs2    vrs1 21..19=6 vrd      11..7=0x0C 6..0=0x3f
-vand       63..43=0 42..36=0  vrs2    vrs1 21..19=7 vrd      11..7=0x0C 6..0=0x3f
-
-vaddiw     63..43=0 42..41=0 vimm12            vrs1 21..19=0 vrd      11..7=0x06 6..0=0x3f
-vslliw     63..43=0 42..36=0  35..34=0 vshamtw vrs1 21..19=1 vrd      11..7=0x06 6..0=0x3f
-vsrliw     63..43=0 42..36=0  35..34=0 vshamtw vrs1 21..19=5 vrd      11..7=0x06 6..0=0x3f
-vsraiw     63..43=0 42..36=32 35..34=0 vshamtw vrs1 21..19=5 vrd      11..7=0x06 6..0=0x3f
-
-vaddw      63..43=0 42..36=0  vrs2    vrs1 21..19=0 vrd      11..7=0x0E 6..0=0x3f
-vsubw      63..43=0 42..36=32 vrs2    vrs1 21..19=0 vrd      11..7=0x0E 6..0=0x3f
-vsllw      63..43=0 42..36=0  vrs2    vrs1 21..19=1 vrd      11..7=0x0E 6..0=0x3f
-vsrlw      63..43=0 42..36=0  vrs2    vrs1 21..19=5 vrd      11..7=0x0E 6..0=0x3f
-vsraw      63..43=0 42..36=32 vrs2    vrs1 21..19=5 vrd      11..7=0x0E 6..0=0x3f
-
-velb        63..41=0 vimm12            vrs1 21..19=0 vrd      11..7=0x00 6..0=0x3f
-velh        63..41=0 vimm12            vrs1 21..19=1 vrd      11..7=0x00 6..0=0x3f
-velw        63..41=0 vimm12            vrs1 21..19=2 vrd      11..7=0x00 6..0=0x3f
-veld        63..41=0 vimm12            vrs1 21..19=3 vrd      11..7=0x00 6..0=0x3f
-velbu       63..41=0 vimm12            vrs1 21..19=4 vrd      11..7=0x00 6..0=0x3f
-velhu       63..41=0 vimm12            vrs1 21..19=5 vrd      11..7=0x00 6..0=0x3f
-velwu       63..41=0 vimm12            vrs1 21..19=6 vrd      11..7=0x00 6..0=0x3f
-
-vesb        63..43=0 vimm12hi  vrs2    vrs1 21..19=0 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
-vesh        63..43=0 vimm12hi  vrs2    vrs1 21..19=1 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
-vesw        63..43=0 vimm12hi  vrs2    vrs1 21..19=2 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
-vesd        63..43=0 vimm12hi  vrs2    vrs1 21..19=3 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
+#                   segment  unused   x/f  s/u  width    strided                         opcode
+#                   |        |        |    |    |        |                               |
+vssegxd     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegxw     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegxh     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vssegxb     63..61=5 vseglen 49..46=0 45=0 44=0 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vfssegxd    63..61=5 vseglen 49..46=0 45=1 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
+vfssegxw    63..61=5 vseglen 49..46=0 45=1 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x1E 6..0=0x3f
 
 #scalar/shared load/stores
-veslb        63..43=1 42..41=0 vimm12            vrs1 21..19=0 vrd      11..7=0x00 6..0=0x3f
-veslh        63..43=1 42..41=0 vimm12            vrs1 21..19=1 vrd      11..7=0x00 6..0=0x3f
-veslw        63..43=1 42..41=0 vimm12            vrs1 21..19=2 vrd      11..7=0x00 6..0=0x3f
-vesld        63..43=1 42..41=0 vimm12            vrs1 21..19=3 vrd      11..7=0x00 6..0=0x3f
-veslbu       63..43=1 42..41=0 vimm12            vrs1 21..19=4 vrd      11..7=0x00 6..0=0x3f
-veslhu       63..43=1 42..41=0 vimm12            vrs1 21..19=5 vrd      11..7=0x00 6..0=0x3f
-veslwu       63..43=1 42..41=0 vimm12            vrs1 21..19=6 vrd      11..7=0x00 6..0=0x3f
+#veslb        63..43=1 42..41=0 vimm12            vrs1 21..19=0 vrd      11..7=0x00 6..0=0x3f
+#veslh        63..43=1 42..41=0 vimm12            vrs1 21..19=1 vrd      11..7=0x00 6..0=0x3f
+#veslw        63..43=1 42..41=0 vimm12            vrs1 21..19=2 vrd      11..7=0x00 6..0=0x3f
+#vesld        63..43=1 42..41=0 vimm12            vrs1 21..19=3 vrd      11..7=0x00 6..0=0x3f
+#veslbu       63..43=1 42..41=0 vimm12            vrs1 21..19=4 vrd      11..7=0x00 6..0=0x3f
+#veslhu       63..43=1 42..41=0 vimm12            vrs1 21..19=5 vrd      11..7=0x00 6..0=0x3f
+#veslwu       63..43=1 42..41=0 vimm12            vrs1 21..19=6 vrd      11..7=0x00 6..0=0x3f
 
-vessb        63..43=1 vimm12hi  vrs2    vrs1 21..19=0 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
-vessh        63..43=1 vimm12hi  vrs2    vrs1 21..19=1 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
-vessw        63..43=1 vimm12hi  vrs2    vrs1 21..19=2 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
-vessd        63..43=1 vimm12hi  vrs2    vrs1 21..19=3 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
+#vessb        63..43=1 vimm12hi  vrs2    vrs1 21..19=0 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
+#vessh        63..43=1 vimm12hi  vrs2    vrs1 21..19=1 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
+#vessw        63..43=1 vimm12hi  vrs2    vrs1 21..19=2 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
+#vessd        63..43=1 vimm12hi  vrs2    vrs1 21..19=3 18..17=0 vimm12lo 11..7=0x08 6..0=0x3f
+#scalar/shared fload/fstore
+#vesflw       63..43=1 42..41=0 vimm12                        vrs1 21..19=2 vrd 11..7=0x01 6..0=0x3f
+#vesfld       63..43=1 42..41=0 vimm12                        vrs1 21..19=3 vrd 11..7=0x01 6..0=0x3f
 
+#vesfsw       63..43=1 vimm12hi             vrs2     vrs1 21..19=2 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
+#vesfsd       63..43=1 vimm12hi             vrs2     vrs1 21..19=3 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
+#scalar/shared fload/fstore
+#vesflh         63..43=1 42..41=0 vimm12                                  vrs1 21..19=1 vrd 11..7=0x01 6..0=0x3f
+#vesfsh         63..43=1 vimm12hi                       vrs2     vrs1 21..19=1 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
+
+#vector + vector/scalar     funct7                  funct3  
+vadd       vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vsub       vd vs1 vs2 60=0 59..53=32               52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vsll       vd vs1 vs2 60=0 59..53=0                52..50=1 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vslt       vd vs1 vs2 60=0 59..53=0                52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vsltu      vd vs1 vs2 60=0 59..53=0                52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vxor       vd vs1 vs2 60=0 59..53=0                52..50=4 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vsrl       vd vs1 vs2 60=0 59..53=0                52..50=5 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vsra       vd vs1 vs2 60=0 59..53=32               52..50=5 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vor        vd vs1 vs2 60=0 59..53=0                52..50=6 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vand       vd vs1 vs2 60=0 59..53=0                52..50=7 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+
+vaddw      vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vsubw      vd vs1 vs2 60=0 59..53=32               52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vsllw      vd vs1 vs2 60=0 59..53=0                52..50=1 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vsrlw      vd vs1 vs2 60=0 59..53=0                52..50=5 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vsraw      vd vs1 vs2 60=0 59..53=32               52..50=5 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+# 
 # RV32M
-vmul       63..43=0 42..36=1  vrs2    vrs1 21..19=0 vrd               11..7=0x0C 6..0=0x3f
-vmulh      63..43=0 42..36=1  vrs2    vrs1 21..19=1 vrd               11..7=0x0C 6..0=0x3f
-vmulhsu    63..43=0 42..36=1  vrs2    vrs1 21..19=2 vrd               11..7=0x0C 6..0=0x3f
-vmulhu     63..43=0 42..36=1  vrs2    vrs1 21..19=3 vrd               11..7=0x0C 6..0=0x3f
-vdiv       63..43=0 42..36=1  vrs2    vrs1 21..19=4 vrd               11..7=0x0C 6..0=0x3f
-vdivu      63..43=0 42..36=1  vrs2    vrs1 21..19=5 vrd               11..7=0x0C 6..0=0x3f
-vrem       63..43=0 42..36=1  vrs2    vrs1 21..19=6 vrd               11..7=0x0C 6..0=0x3f
-vremu      63..43=0 42..36=1  vrs2    vrs1 21..19=7 vrd               11..7=0x0C 6..0=0x3f
-
+vmul       vd vs1 vs2 60=0 59..53=1                52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vmulh      vd vs1 vs2 60=0 59..53=1                52..50=1 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vmulhsu    vd vs1 vs2 60=0 59..53=1                52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vmulhu     vd vs1 vs2 60=0 59..53=1                52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vdiv       vd vs1 vs2 60=0 59..53=1                52..50=4 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vdivu      vd vs1 vs2 60=0 59..53=1                52..50=5 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vrem       vd vs1 vs2 60=0 59..53=1                52..50=6 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vremu      vd vs1 vs2 60=0 59..53=1                52..50=7 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+#
 # RV64M
-vmulw      63..43=0 42..36=1  vrs2    vrs1 21..19=0 vrd               11..7=0x0E 6..0=0x3f
-vdivw      63..43=0 42..36=1  vrs2    vrs1 21..19=4 vrd               11..7=0x0E 6..0=0x3f
-vdivuw     63..43=0 42..36=1  vrs2    vrs1 21..19=5 vrd               11..7=0x0E 6..0=0x3f
-vremw      63..43=0 42..36=1  vrs2    vrs1 21..19=6 vrd               11..7=0x0E 6..0=0x3f
-vremuw     63..43=0 42..36=1  vrs2    vrs1 21..19=7 vrd               11..7=0x0E 6..0=0x3f
+vmulw      vd vs1 vs2 60=0 59..53=1                52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vdivw      vd vs1 vs2 60=0 59..53=1                52..50=4 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vdivuw     vd vs1 vs2 60=0 59..53=1                52..50=5 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vremw      vd vs1 vs2 60=0 59..53=1                52..50=6 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
+vremuw     vd vs1 vs2 60=0 59..53=1                52..50=7 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
 
 # RV32A
-vamoadd.w  63..43=0 42..40=0 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamoxor.w  63..43=0 42..40=1 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamoor.w   63..43=0 42..40=2 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamoand.w  63..43=0 42..40=3 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamomin.w  63..43=0 42..40=4 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamomax.w  63..43=0 42..40=5 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamominu.w 63..43=0 42..40=6 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamomaxu.w 63..43=0 42..40=7 vaqrl 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vamoswap.w 63..43=0 42..40=0 vaqrl 37..36=1 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vlr.w      63..43=0 42..40=0 vaqrl 37..36=2 35..29=0 vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
-vsc.w      63..43=0 42..40=0 vaqrl 37..36=3 vrs2     vrs1 21..19=2 vrd 11..7=0x0B 6..0=0x3f
+vamoadd.w  vd vs1 vs2 60=0 59..57=0 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoxor.w  vd vs1 vs2 60=0 59..57=1 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoor.w   vd vs1 vs2 60=0 59..57=2 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoand.w  vd vs1 vs2 60=0 59..57=3 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomin.w  vd vs1 vs2 60=0 59..57=4 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomax.w  vd vs1 vs2 60=0 59..57=5 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamominu.w vd vs1 vs2 60=0 59..57=6 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomaxu.w vd vs1 vs2 60=0 59..57=7 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoswap.w vd vs1 vs2 60=0 59..57=0 56..55=1 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
 
 # RV64A
-vamoadd.d  63..43=0 42..40=0 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamoxor.d  63..43=0 42..40=1 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamoor.d   63..43=0 42..40=2 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamoand.d  63..43=0 42..40=3 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamomin.d  63..43=0 42..40=4 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamomax.d  63..43=0 42..40=5 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamominu.d 63..43=0 42..40=6 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamomaxu.d 63..43=0 42..40=7 vaqrl 37..36=0 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vamoswap.d 63..43=0 42..40=0 vaqrl 37..36=1 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vlr.d      63..43=0 42..40=0 vaqrl 37..36=2 35..29=0 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
-vsc.d      63..43=0 42..40=0 vaqrl 37..36=3 vrs2 vrs1 21..19=3 vrd 11..7=0x0B 6..0=0x3f
+vamoadd.d  vd vs1 vs2 60=0 59..57=0 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoxor.d  vd vs1 vs2 60=0 59..57=1 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoor.d   vd vs1 vs2 60=0 59..57=2 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoand.d  vd vs1 vs2 60=0 59..57=3 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomin.d  vd vs1 vs2 60=0 59..57=4 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomax.d  vd vs1 vs2 60=0 59..57=5 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamominu.d vd vs1 vs2 60=0 59..57=6 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomaxu.d vd vs1 vs2 60=0 59..57=7 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoswap.d vd vs1 vs2 60=0 59..57=0 56..55=1 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
 
 # F/D EXTENSIONS
-vfadd.s    63..43=0 42..38=0x00 37..36=0 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsub.s    63..43=0 42..38=0x01 37..36=0 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmul.s    63..43=0 42..38=0x02 37..36=0 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfdiv.s    63..43=0 42..38=0x03 37..36=0 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsgnj.s   63..43=0 42..38=0x04 37..36=0 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfsgnjn.s  63..43=0 42..38=0x04 37..36=0 vrs2     vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
-vfsgnjx.s  63..43=0 42..38=0x04 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x14 6..0=0x3f
-vfmin.s    63..43=0 42..38=0x05 37..36=0 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfmax.s    63..43=0 42..38=0x05 37..36=0 vrs2     vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
-vfsqrt.s   63..43=0 42..38=0x0B 37..36=0 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
+vfadd.s    vd vs1 vs2 60=0 59..55=0x00 54..53=0 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsub.s    vd vs1 vs2 60=0 59..55=0x01 54..53=0 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmul.s    vd vs1 vs2 60=0 59..55=0x02 54..53=0 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfdiv.s    vd vs1 vs2 60=0 59..55=0x03 54..53=0 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnj.s   vd vs1 vs2 60=0 59..55=0x04 54..53=0 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnjn.s  vd vs1 vs2 60=0 59..55=0x04 54..53=0 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnjx.s  vd vs1 vs2 60=0 59..55=0x04 54..53=0 52..50=2    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmin.s    vd vs1 vs2 60=0 59..55=0x05 54..53=0 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmax.s    vd vs1 vs2 60=0 59..55=0x05 54..53=0 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsqrt.s   vd vs1 vs2 60=0 59..55=0x0B 54..53=0 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfadd.d    63..43=0 42..38=0x00 37..36=1 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsub.d    63..43=0 42..38=0x01 37..36=1 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmul.d    63..43=0 42..38=0x02 37..36=1 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfdiv.d    63..43=0 42..38=0x03 37..36=1 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsgnj.d   63..43=0 42..38=0x04 37..36=1 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfsgnjn.d  63..43=0 42..38=0x04 37..36=1 vrs2     vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
-vfsgnjx.d  63..43=0 42..38=0x04 37..36=1 vrs2     vrs1 21..19=2 vrd 11..7=0x14 6..0=0x3f
-vfmin.d    63..43=0 42..38=0x05 37..36=1 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfmax.d    63..43=0 42..38=0x05 37..36=1 vrs2     vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
-vfcvt.s.d  63..43=0 42..38=0x08 37..36=0 35..29=1 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.d.s  63..43=0 42..38=0x08 37..36=1 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsqrt.d   63..43=0 42..38=0x0B 37..36=1 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
+vfadd.d    vd vs1 vs2 60=0 59..55=0x00 54..53=1 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsub.d    vd vs1 vs2 60=0 59..55=0x01 54..53=1 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmul.d    vd vs1 vs2 60=0 59..55=0x02 54..53=1 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfdiv.d    vd vs1 vs2 60=0 59..55=0x03 54..53=1 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnj.d   vd vs1 vs2 60=0 59..55=0x04 54..53=1 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnjn.d  vd vs1 vs2 60=0 59..55=0x04 54..53=1 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnjx.d  vd vs1 vs2 60=0 59..55=0x04 54..53=1 52..50=2    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmin.d    vd vs1 vs2 60=0 59..55=0x05 54..53=1 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmax.d    vd vs1 vs2 60=0 59..55=0x05 54..53=1 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.s.d  vd vs1 vs2 60=0 59..55=0x08 54..53=0 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.d.s  vd vs1 vs2 60=0 59..55=0x08 54..53=1 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsqrt.d   vd vs1 vs2 60=0 59..55=0x0B 54..53=1 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfle.s     63..43=0 42..38=0x14 37..36=0 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vflt.s     63..43=0 42..38=0x14 37..36=0 vrs2     vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
-vfeq.s     63..43=0 42..38=0x14 37..36=0 vrs2     vrs1 21..19=2 vrd 11..7=0x14 6..0=0x3f
+vfle.s     vd vs1 vs2 60=0 59..55=0x14 54..53=0 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vflt.s     vd vs1 vs2 60=0 59..55=0x14 54..53=0 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfeq.s     vd vs1 vs2 60=0 59..55=0x14 54..53=0 52..50=2    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfle.d     63..43=0 42..38=0x14 37..36=1 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vflt.d     63..43=0 42..38=0x14 37..36=1 vrs2     vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
-vfeq.d     63..43=0 42..38=0x14 37..36=1 vrs2     vrs1 21..19=2 vrd 11..7=0x14 6..0=0x3f
+vfle.d     vd vs1 vs2 60=0 59..55=0x14 54..53=1 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vflt.d     vd vs1 vs2 60=0 59..55=0x14 54..53=1 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfeq.d     vd vs1 vs2 60=0 59..55=0x14 54..53=1 52..50=2    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.w.s  63..43=0 42..38=0x18 37..36=0 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.wu.s 63..43=0 42..38=0x18 37..36=0 35..29=1 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.l.s  63..43=0 42..38=0x18 37..36=0 35..29=2 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.lu.s 63..43=0 42..38=0x18 37..36=0 35..29=3 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmv.x.s   63..43=0 42..38=0x1C 37..36=0 35..29=0 vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfclass.s  63..43=0 42..38=0x1C 37..36=0 35..29=0 vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
+vfcvt.w.s  vd vs1 vs2 60=0 59..55=0x18 54..53=0 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.wu.s vd vs1 vs2 60=0 59..55=0x18 54..53=0 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.l.s  vd vs1 vs2 60=0 59..55=0x18 54..53=0 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.lu.s vd vs1 vs2 60=0 59..55=0x18 54..53=0 vrm         49..41=0 40..33=3 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmv.x.s   vd vs1 vs2 60=0 59..55=0x1C 54..53=0 52..50=0    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfclass.s  vd vs1 vs2 60=0 59..55=0x1C 54..53=0 52..50=1    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.w.d  63..43=0 42..38=0x18 37..36=1 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.wu.d 63..43=0 42..38=0x18 37..36=1 35..29=1 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.l.d  63..43=0 42..38=0x18 37..36=1 35..29=2 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.lu.d 63..43=0 42..38=0x18 37..36=1 35..29=3 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmv.x.d   63..43=0 42..38=0x1C 37..36=1 35..29=0 vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfclass.d  63..43=0 42..38=0x1C 37..36=1 35..29=0 vrs1 21..19=1 vrd 11..7=0x14 6..0=0x3f
+vfcvt.w.d  vd vs1 vs2 60=0 59..55=0x18 54..53=1 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.wu.d vd vs1 vs2 60=0 59..55=0x18 54..53=1 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.l.d  vd vs1 vs2 60=0 59..55=0x18 54..53=1 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.lu.d vd vs1 vs2 60=0 59..55=0x18 54..53=1 vrm         49..41=0 40..33=3 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmv.x.d   vd vs1 vs2 60=0 59..55=0x1C 54..53=1 52..50=0    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfclass.d  vd vs1 vs2 60=0 59..55=0x1C 54..53=1 52..50=1    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.s.w  63..43=0 42..38=0x1A 37..36=0 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.s.wu 63..43=0 42..38=0x1A 37..36=0 35..29=1 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.s.l  63..43=0 42..38=0x1A 37..36=0 35..29=2 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.s.lu 63..43=0 42..38=0x1A 37..36=0 35..29=3 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmv.s.x   63..43=0 42..38=0x1E 37..36=0 35..29=0 vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
+vfcvt.s.w  vd vs1 vs2 60=0 59..55=0x1A 54..53=0 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.s.wu vd vs1 vs2 60=0 59..55=0x1A 54..53=0 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.s.l  vd vs1 vs2 60=0 59..55=0x1A 54..53=0 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.s.lu vd vs1 vs2 60=0 59..55=0x1A 54..53=0 vrm         49..41=0 40..33=3 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmv.s.x   vd vs1 vs2 60=0 59..55=0x1E 54..53=0 52..50=0    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.d.w  63..43=0 42..38=0x1A 37..36=1 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.d.wu 63..43=0 42..38=0x1A 37..36=1 35..29=1 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.d.l  63..43=0 42..38=0x1A 37..36=1 35..29=2 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.d.lu 63..43=0 42..38=0x1A 37..36=1 35..29=3 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmv.d.x   63..43=0 42..38=0x1E 37..36=1 35..29=0 vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
+vfcvt.d.w  vd vs1 vs2 60=0 59..55=0x1A 54..53=1 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.d.wu vd vs1 vs2 60=0 59..55=0x1A 54..53=1 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.d.l  vd vs1 vs2 60=0 59..55=0x1A 54..53=1 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.d.lu vd vs1 vs2 60=0 59..55=0x1A 54..53=1 vrm         49..41=0 40..33=3 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmv.d.x   vd vs1 vs2 60=0 59..55=0x1E 54..53=1 52..50=0    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-veflw       63..41=0 vimm12                        vrs1 21..19=2 vrd 11..7=0x01 6..0=0x3f
-vefld       63..41=0 vimm12                        vrs1 21..19=3 vrd 11..7=0x01 6..0=0x3f
+vfmadd.s   vd vs1 vs2 vs3  59..55=0    54..53=0 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x10 6..0=0x3f
+vfmsub.s   vd vs1 vs2 vs3  59..55=0    54..53=0 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x11 6..0=0x3f
+vfnmsub.s  vd vs1 vs2 vs3  59..55=0    54..53=0 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x12 6..0=0x3f
+vfnmadd.s  vd vs1 vs2 vs3  59..55=0    54..53=0 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x13 6..0=0x3f
 
-vefsw       63..43=0 vimm12hi             vrs2     vrs1 21..19=2 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
-vefsd       63..43=0 vimm12hi             vrs2     vrs1 21..19=3 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
-
-#scalar/shared fload/fstore
-vesflw       63..43=1 42..41=0 vimm12                        vrs1 21..19=2 vrd 11..7=0x01 6..0=0x3f
-vesfld       63..43=1 42..41=0 vimm12                        vrs1 21..19=3 vrd 11..7=0x01 6..0=0x3f
-
-vesfsw       63..43=1 vimm12hi             vrs2     vrs1 21..19=2 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
-vesfsd       63..43=1 vimm12hi             vrs2     vrs1 21..19=3 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
-
-vfmadd.s   63..43=0 vrs3 37..36=0        vrs2     vrs1 vrm      vrd      11..7=0x10 6..0=0x3f
-vfmsub.s   63..43=0 vrs3 37..36=0        vrs2     vrs1 vrm      vrd      11..7=0x11 6..0=0x3f
-vfnmsub.s  63..43=0 vrs3 37..36=0        vrs2     vrs1 vrm      vrd      11..7=0x12 6..0=0x3f
-vfnmadd.s  63..43=0 vrs3 37..36=0        vrs2     vrs1 vrm      vrd      11..7=0x13 6..0=0x3f
-
-vfmadd.d   63..43=0 vrs3 37..36=1        vrs2     vrs1 vrm      vrd      11..7=0x10 6..0=0x3f
-vfmsub.d   63..43=0 vrs3 37..36=1        vrs2     vrs1 vrm      vrd      11..7=0x11 6..0=0x3f
-vfnmsub.d  63..43=0 vrs3 37..36=1        vrs2     vrs1 vrm      vrd      11..7=0x12 6..0=0x3f
-vfnmadd.d  63..43=0 vrs3 37..36=1        vrs2     vrs1 vrm      vrd      11..7=0x13 6..0=0x3f
-
+vfmadd.d   vd vs1 vs2 vs3  59..55=0    54..53=1 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x10 6..0=0x3f
+vfmsub.d   vd vs1 vs2 vs3  59..55=0    54..53=1 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x11 6..0=0x3f
+vfnmsub.d  vd vs1 vs2 vs3  59..55=0    54..53=1 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x12 6..0=0x3f
+vfnmadd.d  vd vs1 vs2 vs3  59..55=0    54..53=1 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x13 6..0=0x3f
 
 # half-precision floating-point operations for hwacha microthreads
+vfadd.h    vd vs1 vs2 60=0 59..55=0x00 54..53=2 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsub.h    vd vs1 vs2 60=0 59..55=0x01 54..53=2 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmul.h    vd vs1 vs2 60=0 59..55=0x02 54..53=2 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfdiv.h    vd vs1 vs2 60=0 59..55=0x03 54..53=2 vrm         49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnj.h   vd vs1 vs2 60=0 59..55=0x04 54..53=2 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnjn.h  vd vs1 vs2 60=0 59..55=0x04 54..53=2 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsgnjx.h  vd vs1 vs2 60=0 59..55=0x04 54..53=2 52..50=2    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmin.h    vd vs1 vs2 60=0 59..55=0x05 54..53=2 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmax.h    vd vs1 vs2 60=0 59..55=0x05 54..53=2 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfsqrt.h   vd vs1 vs2 60=0 59..55=0x0B 54..53=2 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfadd.h      63..43=0 42..38=0x0            37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsub.h      63..43=0 42..38=0x1            37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfmul.h      63..43=0 42..38=0x2            37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfdiv.h      63..43=0 42..38=0x3            37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsqrt.h     63..43=0 42..38=0x4            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfsgnj.h     63..43=0 42..38=0x5            37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfsgnjn.h    63..43=0 42..38=0x6            37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfsgnjx.h    63..43=0 42..38=0x7            37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
+vfcvt.h.w  vd vs1 vs2 60=0 59..55=0x1A 54..53=2 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.h.wu vd vs1 vs2 60=0 59..55=0x1A 54..53=2 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.h.l  vd vs1 vs2 60=0 59..55=0x1A 54..53=2 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.h.lu vd vs1 vs2 60=0 59..55=0x1A 54..53=2 vrm         49..41=0 40..33=3 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.h.l    63..43=0 42..38=0xC            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.h.lu   63..43=0 42..38=0xD            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.h.w    63..43=0 42..38=0xE            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.h.wu   63..43=0 42..38=0xF            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
+vfcvt.w.h  vd vs1 vs2 60=0 59..55=0x18 54..53=2 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.wu.h vd vs1 vs2 60=0 59..55=0x18 54..53=2 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.l.h  vd vs1 vs2 60=0 59..55=0x18 54..53=2 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.lu.h vd vs1 vs2 60=0 59..55=0x18 54..53=2 vrm         49..41=0 40..33=3 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.l.h    63..43=0 42..38=0x8            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.lu.h   63..43=0 42..38=0x9            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.w.h    63..43=0 42..38=0xA            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.wu.h   63..43=0 42..38=0xB            37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
+vfcvt.d.h  vd vs1 vs2 60=0 59..55=0x08 54..53=0 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.h.d  vd vs1 vs2 60=0 59..55=0x08 54..53=2 vrm         49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.s.h    63..43=0 42..40=0x4 39..38=0   37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.h.s    63..43=0 42..40=0x4 39..38=2   37..36=0 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
+vfcvt.s.h  vd vs1 vs2 60=0 59..55=0x08 54..53=1 vrm         49..41=0 40..33=2 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfcvt.h.s  vd vs1 vs2 60=0 59..55=0x08 54..53=2 vrm         49..41=0 40..33=1 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfcvt.d.h    63..43=0 42..40=0x4 39..38=1   37..36=2 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
-vfcvt.h.d    63..43=0 42..40=0x4 39..38=2   37..36=1 35..29=0 vrs1 vrm      vrd 11..7=0x14 6..0=0x3f
+vfle.h     vd vs1 vs2 60=0 59..55=0x14 54..53=2 52..50=0    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vflt.h     vd vs1 vs2 60=0 59..55=0x14 54..53=2 52..50=1    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfeq.h     vd vs1 vs2 60=0 59..55=0x14 54..53=2 52..50=2    49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfeq.h       63..43=0 42..38=0x15           37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vflt.h       63..43=0 42..38=0x16           37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfle.h       63..43=0 42..38=0x17           37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
+vfmv.x.h   vd vs1 vs2 60=0 59..55=0x1C 54..53=2 52..50=0    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
+vfmv.h.x   vd vs1 vs2 60=0 59..55=0x1E 54..53=2 52..50=0    49..41=0 40..33=0 vn vrs1 vrd vpred 11..7=0x14 6..0=0x3f
 
-vfmin.h      63..43=0 42..38=0x18           37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfmax.h      63..43=0 42..38=0x19           37..36=2 vrs2     vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-
-vfmv.x.h     63..43=0 42..38=0x1C           37..36=2 35..29=0 vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-vfmv.h.x     63..43=0 42..38=0x1E           37..36=2 35..29=0 vrs1 21..19=0 vrd 11..7=0x14 6..0=0x3f
-
-veflh         63..41=0 vimm12                                  vrs1 21..19=1 vrd 11..7=0x01 6..0=0x3f
-
-vefsh         63..43=0 vimm12hi                       vrs2     vrs1 21..19=1 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
-
-#scalar/shared fload/fstore
-vesflh         63..43=1 42..41=0 vimm12                                  vrs1 21..19=1 vrd 11..7=0x01 6..0=0x3f
-
-vesfsh         63..43=1 vimm12hi                       vrs2     vrs1 21..19=1 18..17=0 vimm12lo 11..7=0x09 6..0=0x3f
-
-vfmadd.h     63..43=0 vrs3                  37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x10 6..0=0x3f
-vfmsub.h     63..43=0 vrs3                  37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x11 6..0=0x3f
-vfnmsub.h    63..43=0 vrs3                  37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x12 6..0=0x3f
-vfnmadd.h    63..43=0 vrs3                  37..36=2 vrs2     vrs1 vrm      vrd 11..7=0x13 6..0=0x3f
-
+vfmadd.h   vd vs1 vs2 vs3  59..55=0    54..53=2 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x10 6..0=0x3f
+vfmsub.h   vd vs1 vs2 vs3  59..55=0    54..53=2 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x11 6..0=0x3f
+vfnmsub.h  vd vs1 vs2 vs3  59..55=0    54..53=2 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x12 6..0=0x3f
+vfnmadd.h  vd vs1 vs2 vs3  59..55=0    54..53=2 vrm 49=0    vrs3     vrs2     vn vrs1 vrd vpred 11..7=0x13 6..0=0x3f
