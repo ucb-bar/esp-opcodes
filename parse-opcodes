@@ -700,6 +700,43 @@ def print_vr4_type(name,match,arguments):
     str_hwacha_inst(name,arguments) \
   )
 
+def print_vidx_type(name,match,arguments):
+  print """
+\\multicolumn{1}{|c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-21}
+  """ % \
+  ( \
+  str_arg('vd','d',match,arguments), \
+    str_arg('vs1','s1',match,arguments), \
+    str_arg('vs2','s2',match,arguments), \
+    str_arg('vs3','s3',match,arguments), \
+    binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
+    str_arg('vseglen', 'seglen',match,arguments), \
+    binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
+    str_arg('vrs2','',match,arguments), \
+    str_arg('vn','n',match,arguments), \
+    binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
+    str_arg('vars1','',match,arguments), \
+    str_arg('vrd','',match,arguments), \
+    str_arg('vpred','pred',match,arguments), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,arguments) \
+  )
+
+
 def print_vseg_type(name,match,arguments):
   print """
 \\multicolumn{1}{|c|}{%s} &
@@ -1191,11 +1228,13 @@ def print_hwacha_inst(n):
       print_vpop_type(n, match[n], arguments[n])
     else:
       print_vpcmp_type(n, match[n], arguments[n])
-  else:
-    if 'vseglen' in arguments[n]:
+  elif 'vars1' in arguments[n]:
+    if 'vrs2' in arguments[n]:
+      print_vidx_type(n, match[n], arguments[n])
+    else:
       print_vseg_type(n, match[n], arguments[n])
-    else: 
-      print_vr_type(n, match[n], arguments[n])
+  else:
+    print_vr_type(n, match[n], arguments[n])
 
 def print_insts(*names):
   for n in names:
@@ -1296,8 +1335,12 @@ def make_hwacha_latex_table():
   print_hwacha_header('vr')
   print_hwacha_subtitle('Hwacha Load/Store Operations')
   print_hwacha_insts('vlsegstb', 'vlsegsth', 'vlsegstw', 'vlsegstd', 'vlsegstbu', 'vlsegsthu', 'vlsegstwu', 'vssegstb', 'vssegsth', 'vssegstw', 'vssegstd', 'vflsegstw', 'vflsegstd', 'vfssegstw', 'vfssegstd')
+  print_hwacha_footer(0)
+
+  print_hwacha_header('vr')
+  print_hwacha_subtitle('Hwacha Load/Store Operations')
   print_hwacha_insts('vlxb', 'vlxh', 'vlxw', 'vlxd', 'vlxbu', 'vlxhu', 'vlxwu', 'vsxb', 'vsxh', 'vsxw', 'vsxd', 'vflxw', 'vflxd', 'vfsxw', 'vfsxd')
-  #print_hwacha_insts('vlxsegb', 'vlxsegh', 'vlxsegw', 'vlxsegd', 'vlxsegbu', 'vlxseghu', 'vlxsegwu', 'vsxsegb', 'vsxsegh', 'vsxsegw', 'vflxsegw', 'vflxsegd', 'vfsxsegw', 'vfsxsegd')
+  print_hwacha_insts('vlsegxb', 'vlsegxh', 'vlsegxw', 'vlsegxd', 'vlsegxbu', 'vlsegxhu', 'vlsegxwu', 'vssegxb', 'vssegxh', 'vssegxw', 'vflsegxw', 'vflsegxd', 'vfssegxw', 'vfssegxd')
   print_hwacha_footer(0)
 
   print_hwacha_header('vi','vr')
