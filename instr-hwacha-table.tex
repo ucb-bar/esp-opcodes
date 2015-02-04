@@ -7,7 +7,7 @@
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -16,76 +16,77 @@
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{2}{c|}{funct16} &
+\multicolumn{5}{c|}{funct16} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VB-type \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VJ-type \\
-\cline{1-15}
+\cline{1-21}
   
 
-\cline{1-15}
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{funct8} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{funct8} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{funct4} &
 \multicolumn{1}{c|}{opcode} &
 VU-type \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{funct4} &
 \multicolumn{1}{c|}{opcode} &
 VI-type \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 \multicolumn{1}{|c|}{d} &
@@ -95,22 +96,22 @@ VR-type \\
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
 \multicolumn{1}{c|}{f} &
-\multicolumn{1}{c|}{vs3} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR4-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Control Instructions} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Control Instructions} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{0} &
@@ -119,14 +120,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{101} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{00000000} &
 \multicolumn{1}{c|}{0000} &
 \multicolumn{1}{c|}{111010111111} & STOP  \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{0} &
@@ -135,66 +136,66 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{vrd} &
-\multicolumn{1}{c|}{0000} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
+\multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{111010111111} & EIDX vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0000} &
 \multicolumn{1}{c|}{011010111111} & VLUI vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0000} &
 \multicolumn{1}{c|}{001010111111} & VAUIPC vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{110110111111} & VJAL vcond,vn,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{110010111111} & VJALR vcond,vn,vrs1,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{2}{c|}{0000000000000000} &
+\multicolumn{5}{c|}{0000000000000000} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{110000111111} & VCBRANCH vcond,vn,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Predicate Operations} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Predicate Operations} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -203,14 +204,16 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
 \multicolumn{1}{c|}{0000} &
-\multicolumn{1}{c|}{101100111111} & VPL vrs1,vprd \\
-\cline{1-15}
+\multicolumn{1}{c|}{vprd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & VPL vars1,vprd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -219,14 +222,16 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
 \multicolumn{1}{c|}{0000} &
-\multicolumn{1}{c|}{111100111111} & VPS vrs1,vprd \\
-\cline{1-15}
+\multicolumn{1}{c|}{vprd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & VPS vars1,vprd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -235,14 +240,15 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VCMPEQ vrs2,vn,vrs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -251,14 +257,15 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VCMPNE vrs2,vn,vrs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -267,14 +274,15 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VCMPLT vrs2,vn,vrs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -283,14 +291,15 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{101} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VCMPGE vrs2,vn,vrs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -299,14 +308,15 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VCMPLTU vrs2,vn,vrs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -315,158 +325,204 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VCMPGEU vrs2,vn,vrs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000100} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPXORXOR vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000110} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPXOROR vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000111} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPXORAND vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000100} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPORXOR vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000110} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPOROR vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000111} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPORAND vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000100} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPANDXOR vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000110} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPANDOR vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{s1} &
-\multicolumn{1}{c|}{s2} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{n1} &
+\multicolumn{1}{c|}{n2} &
+\multicolumn{1}{c|}{n3} &
 \multicolumn{1}{c|}{0000111} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{100000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprs3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vprs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{00000000} &
-\multicolumn{1}{c|}{00000000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{vprs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{vprd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VPANDAND vprs3,vprs2,vn,vprs1,vprd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \end{tabular}
@@ -487,7 +543,7 @@ VR4-type \\
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -496,40 +552,45 @@ VR4-type \\
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Load/Store Operations} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Load/Store Operations} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -538,14 +599,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLB vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLB vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -554,14 +615,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000010} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLH vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLH vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -570,14 +631,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLW vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLW vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -586,14 +647,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLD vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLD vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -602,14 +663,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000001000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLBU vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLBU vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -618,14 +679,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000001010} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLHU vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLHU vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -634,14 +695,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000001100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLWU vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLWU vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -650,14 +711,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSB vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSB vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -666,14 +727,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000010} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSH vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSH vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -682,14 +743,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSW vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSW vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -698,14 +759,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSD vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSD vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -714,14 +775,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLW vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLW vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -730,14 +791,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010110} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLD vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLD vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -746,14 +807,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSW vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSW vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -762,14 +823,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010110} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSD vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSD vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -778,14 +839,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGB vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGB vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -794,14 +857,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000010} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGH vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGH vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -810,14 +875,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGW vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGW vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -826,14 +893,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGD vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGD vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -842,14 +911,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000001000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGBU vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGBU vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -858,14 +929,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000001010} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGHU vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGHU vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -874,14 +947,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000001100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGWU vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGWU vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -890,14 +965,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGB vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGB vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -906,14 +983,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000010} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGH vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGH vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -922,14 +1001,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGW vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGW vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -938,14 +1019,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGD vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGD vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -954,14 +1037,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLSEGW vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLSEGW vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -970,14 +1055,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLSEGD vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLSEGD vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -986,14 +1073,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010100} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSSEGW vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSSEGW vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1002,14 +1091,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010110} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000010110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSSEGD vseglen,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSSEGD vseglen,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \end{tabular}
@@ -1030,7 +1121,7 @@ VR-type \\
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -1039,40 +1130,45 @@ VR-type \\
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Load/Store Operations} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Load/Store Operations} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1081,14 +1177,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000001} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTB vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTB vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1097,14 +1195,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000011} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTH vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTH vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1113,14 +1213,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTW vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTW vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1129,14 +1231,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTD vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTD vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1145,14 +1249,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000001001} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000001001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTBU vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTBU vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1161,14 +1267,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000001011} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTHU vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTHU vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1177,14 +1285,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000001101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000001101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLSEGSTWU vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLSEGSTWU vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1193,14 +1303,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000001} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGSTB vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGSTB vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1209,14 +1321,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000011} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGSTH vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGSTH vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1225,14 +1339,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGSTW vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGSTW vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1241,14 +1357,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000000111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSSEGSTD vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSSEGSTD vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1257,14 +1375,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLSEGSTW vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLSEGSTW vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1273,14 +1393,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLSEGSTD vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLSEGSTD vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1289,14 +1411,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSSEGSTW vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSSEGSTW vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1305,14 +1429,16 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{seglen} &
-\multicolumn{2}{c|}{000010111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{vars2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{vars1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSSEGSTD vseglen,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSSEGSTD vseglen,vars2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1321,14 +1447,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000001} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXB vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXB vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1337,14 +1463,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000011} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXH vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXH vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1353,14 +1479,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXW vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXW vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1369,14 +1495,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXD vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXD vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1385,14 +1511,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000001001} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000001001} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXBU vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXBU vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1401,14 +1527,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000001011} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXHU vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXHU vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1417,14 +1543,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000001101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000001101} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VLXWU vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VLXWU vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1433,14 +1559,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000001} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSXB vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSXB vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1449,14 +1575,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000011} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSXH vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSXH vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1465,14 +1591,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSXW vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSXW vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1481,14 +1607,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VSXD vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VSXD vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1497,14 +1623,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010101} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLXW vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLXW vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1513,14 +1639,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010111} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{101100111111} & VFLXD vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{101100111111} & VFLXD vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1529,14 +1655,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010101} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010101} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSXW vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSXW vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{1} &
@@ -1545,14 +1671,14 @@ VR-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000010111} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000010111} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{111100111111} & VFSXD vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\multicolumn{1}{c|}{111100111111} & VFSXD vrs2,vn,vars1,vrd \\
+\cline{1-21}
   
 
 \end{tabular}
@@ -1573,7 +1699,7 @@ VR-type \\
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -1582,76 +1708,77 @@ VR-type \\
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{2}{c|}{funct16} &
+\multicolumn{5}{c|}{funct16} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VB-type \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VJ-type \\
-\cline{1-15}
+\cline{1-21}
   
 
-\cline{1-15}
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{funct8} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{funct8} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{funct4} &
 \multicolumn{1}{c|}{opcode} &
 VU-type \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{funct4} &
 \multicolumn{1}{c|}{opcode} &
 VI-type \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 \multicolumn{1}{|c|}{d} &
@@ -1661,70 +1788,70 @@ VR-type \\
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
 \multicolumn{1}{c|}{f} &
-\multicolumn{1}{c|}{vs3} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR4-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Work Thread Arithemtic Instructions} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Work Thread Arithemtic Instructions} & \\
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0000} &
-\multicolumn{1}{c|}{001100111111} & VADDI vrs1,vrd,vimm,vrs1,vrd,imm \\
-\cline{1-15}
+\multicolumn{1}{c|}{001000111111} & VADDI vrs1,vrd,imm \\
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0010} &
 \multicolumn{1}{c|}{001000111111} & VSLTI vrs1,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0011} &
 \multicolumn{1}{c|}{001000111111} & VSLTIU vrs1,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0100} &
 \multicolumn{1}{c|}{001000111111} & VXORI vrs1,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0110} &
 \multicolumn{1}{c|}{001000111111} & VORI vrs1,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{0111} &
 \multicolumn{1}{c|}{001000111111} & VANDI vrs1,vrd,imm \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1733,14 +1860,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VADD vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1749,14 +1876,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VSUB vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1765,14 +1892,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VSLL vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1781,14 +1908,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VSLT vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1797,14 +1924,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{011} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VSLTU vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1813,14 +1940,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VXOR vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1829,14 +1956,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{101} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VSRL vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1845,14 +1972,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100000} &
 \multicolumn{1}{c|}{101} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VSRA vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1861,14 +1988,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VOR vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1877,14 +2004,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VAND vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1893,14 +2020,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VMUL vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1909,14 +2036,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VMULH vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1925,14 +2052,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VMULHSU vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1941,14 +2068,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{011} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VMULHU vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1957,14 +2084,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VDIV vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1973,14 +2100,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{101} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VDIVU vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -1989,14 +2116,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VREM vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2005,14 +2132,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & VREMU vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2021,14 +2148,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011100111111} & VMULW vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2037,14 +2164,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{100} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011100111111} & VDIVW vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2053,14 +2180,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{101} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011100111111} & VDIVUW vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2069,14 +2196,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{110} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011100111111} & VREMW vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2085,14 +2212,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{111} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011100111111} & VREMUW vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \end{tabular}
@@ -2113,7 +2240,7 @@ VR4-type \\
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -2122,33 +2249,38 @@ VR4-type \\
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 \multicolumn{1}{|c|}{d} &
@@ -2158,22 +2290,22 @@ VR-type \\
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
 \multicolumn{1}{c|}{f} &
-\multicolumn{1}{c|}{vs3} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR4-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Work Thread Single Precision Instructions} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Work Thread Single Precision Instructions} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2183,14 +2315,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100000111111} & VFMADD.S vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2200,14 +2332,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100010111111} & VFMSUB.S vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2217,14 +2349,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100100111111} & VFNMSUB.S vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2234,14 +2366,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100110111111} & VFNMADD.S vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2250,14 +2382,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFADD.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2266,14 +2398,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000100} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSUB.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2282,14 +2414,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0001000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMUL.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2298,14 +2430,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0001100} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFDIV.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2314,14 +2446,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0101100} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSQRT.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2330,14 +2462,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJ.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2346,14 +2478,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010000} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJN.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2362,14 +2494,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010000} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJX.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2378,14 +2510,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010100} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMIN.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2394,14 +2526,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010100} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMAX.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2410,14 +2542,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.W.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2426,14 +2558,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.WU.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2442,14 +2574,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1110000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMV.X.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2458,14 +2590,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1010000} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFEQ.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2474,14 +2606,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1010000} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFLT.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2490,14 +2622,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1010000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFLE.S vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2506,14 +2638,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1110000} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCLASS.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2522,14 +2654,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.S.W vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2538,14 +2670,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.S.WU vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2554,14 +2686,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1111000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMV.S.X vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2570,14 +2702,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.L.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2586,14 +2718,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000011} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.LU.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2602,14 +2734,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.S.L vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2618,14 +2750,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000011} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.S.LU vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \end{tabular}
@@ -2646,7 +2778,7 @@ VR4-type \\
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -2655,33 +2787,38 @@ VR4-type \\
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 \multicolumn{1}{|c|}{d} &
@@ -2691,22 +2828,22 @@ VR-type \\
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
 \multicolumn{1}{c|}{f} &
-\multicolumn{1}{c|}{vs3} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR4-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Work Thread Double Precision Instructions} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Work Thread Double Precision Instructions} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2716,14 +2853,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100000111111} & VFMADD.D vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2733,14 +2870,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100010111111} & VFMSUB.D vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2750,14 +2887,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100100111111} & VFNMSUB.D vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2767,14 +2904,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100110111111} & VFNMADD.D vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2783,14 +2920,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFADD.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2799,14 +2936,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000101} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSUB.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2815,14 +2952,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0001001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMUL.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2831,14 +2968,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0001101} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFDIV.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2847,14 +2984,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0101101} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSQRT.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2863,14 +3000,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJ.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2879,14 +3016,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010001} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJN.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2895,14 +3032,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010001} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJX.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2911,14 +3048,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010101} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMIN.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2927,14 +3064,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010101} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMAX.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2943,14 +3080,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.S.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2959,14 +3096,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.D.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2975,14 +3112,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1010001} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFEQ.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -2991,14 +3128,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1010001} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFLT.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3007,14 +3144,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1010001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFLE.D vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3023,14 +3160,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1110001} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCLASS.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3039,14 +3176,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.W.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3055,14 +3192,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.WU.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3071,14 +3208,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.D.W vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3087,14 +3224,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.D.WU vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3103,14 +3240,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.L.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3119,14 +3256,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000011} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.LU.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3135,14 +3272,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1110001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMV.X.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3151,14 +3288,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.D.L vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3167,14 +3304,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000011} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.D.LU vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3183,14 +3320,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1111001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMV.D.X vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \end{tabular}
@@ -3211,7 +3348,7 @@ VR4-type \\
 \begin{table}[p]
 \begin{small}
 \begin{center}
-\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -3220,33 +3357,38 @@ VR4-type \\
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\
-\cline{1-15}
+\cline{1-21}
 
 
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 \multicolumn{1}{|c|}{d} &
@@ -3256,22 +3398,22 @@ VR-type \\
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
 \multicolumn{1}{c|}{f} &
-\multicolumn{1}{c|}{vs3} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR4-type \\
-\cline{1-15}
+\cline{1-21}
 
 
 &
-\multicolumn{14}{c}{} & \\
+\multicolumn{20}{c}{} & \\
 &
-\multicolumn{14}{c}{\bf Hwacha Work Thread Half Precision Instructions} & \\
-\cline{1-15}
+\multicolumn{20}{c}{\bf Hwacha Work Thread Half Precision Instructions} & \\
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3281,14 +3423,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000010} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100000111111} & VFMADD.H vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3298,14 +3440,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000010} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100010111111} & VFMSUB.H vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3315,14 +3457,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000010} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100100111111} & VFNMSUB.H vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3332,14 +3474,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0000010} &
 \multicolumn{1}{c|}{000} &
 \multicolumn{1}{c|}{0} &
-\multicolumn{1}{c|}{vrs3} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{2}{c|}{vrs3} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{100110111111} & VFNMADD.H vd,vrs3,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3348,14 +3490,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFADD.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3364,14 +3506,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0000110} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSUB.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3380,14 +3522,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0001010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMUL.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3396,14 +3538,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0001110} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFDIV.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3412,14 +3554,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0101110} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSQRT.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3428,14 +3570,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJ.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3444,14 +3586,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010010} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJN.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3460,14 +3602,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010010} &
 \multicolumn{1}{c|}{010} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFSGNJX.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3476,14 +3618,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010110} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMIN.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3492,14 +3634,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0010110} &
 \multicolumn{1}{c|}{001} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{vrs2} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vrs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMAX.H vd,vrs2,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3508,14 +3650,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100001} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.S.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3524,14 +3666,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.H.S vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3540,14 +3682,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100000} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.D.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3556,14 +3698,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0100010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.H.D vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3572,14 +3714,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.W.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3588,14 +3730,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.WU.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3604,14 +3746,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.H.W vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3620,14 +3762,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000001} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.H.WU vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3636,14 +3778,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.L.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3652,14 +3794,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1100010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000011} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.LU.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3668,14 +3810,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1110010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMV.X.H vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3684,14 +3826,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000010} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.H.L vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3700,14 +3842,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1101010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000011} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFCVT.H.LU vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \multicolumn{1}{|c|}{d} &
@@ -3716,14 +3858,14 @@ VR4-type \\
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{1111010} &
 \multicolumn{1}{c|}{000} &
-\multicolumn{2}{c|}{000000000} &
-\multicolumn{2}{c|}{00000000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vrs1} &
-\multicolumn{1}{c|}{vrd} &
+\multicolumn{3}{c|}{vrs1} &
+\multicolumn{2}{c|}{vrd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{101000111111} & VFMV.H.X vd,vn,vrs1,vrd \\
-\cline{1-15}
+\cline{1-21}
   
 
 \end{tabular}

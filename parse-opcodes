@@ -39,10 +39,12 @@ arglut['vrd'] = (23,16)
 arglut['vrs1'] = (31,24)
 arglut['vrs2'] = (40,33)
 arglut['vrs3'] = (48,41)
-arglut['vprd'] = (20,16)
-arglut['vprs1'] = (28,24)
-arglut['vprs2'] = (37,33)
-arglut['vprs3'] = (45,41)
+arglut['vprd'] = (19,16)
+arglut['vprs1'] = (27,24)
+arglut['vprs2'] = (36,33)
+arglut['vprs3'] = (44,41)
+arglut['vars1'] = (28,24)
+arglut['vars2'] = (37,33)
 arglut['vimm'] = (63,32)
 arglut['vcimm'] = (63,35)
 arglut['vshamt'] = (37,32)
@@ -139,6 +141,7 @@ opcode_size = 7
 funct_base = 12
 funct_size = 3
 
+#vector funct fields
 vopcode_base = 0
 vopcode_size = 12
 vfunct_3_base = 50
@@ -157,6 +160,16 @@ vfunct_u_base = 24
 vfunct_u_size = 8
 vfunct_i_base = 12
 vfunct_i_size = 4
+
+#vector padding fields for predicate regs(4 bits pad) and addr regs(3 bits pad)
+vpad_prd_base = 20
+vpad_prs1_base = 28
+vpad_prs2_base = 37
+vpad_prs3_base = 45
+vpad_p_size = 4
+vpad_ars1_base = 29
+vpad_ars2_base = 38
+vpad_a_size = 3
 
 def binary(n, digits=0):
   rep = bin(n)[2:]
@@ -511,13 +524,13 @@ def print_fence_type(name,match,arguments):
 
 def print_vb_type(name,match,arguments):
   print """
-\\multicolumn{9}{|c|}{%s} &
+\\multicolumn{12}{|c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
-\\multicolumn{2}{c|}{%s} &
+\\multicolumn{5}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
   str_arg('vcimm','imm[31:3]',match,arguments), \
@@ -531,14 +544,14 @@ def print_vb_type(name,match,arguments):
 
 def print_vj_type(name,match,arguments):
   print """
-\\multicolumn{9}{|c|}{%s} &
+\\multicolumn{12}{|c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
   str_arg('vcimm','imm[31:3]',match,arguments), \
@@ -553,12 +566,12 @@ def print_vj_type(name,match,arguments):
 
 def print_vu_type(name,match,arguments):
   print """
-\\multicolumn{11}{|c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
+\\multicolumn{14}{|c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
     str_arg('vimm','imm[31:0]',match,arguments), \
@@ -571,12 +584,12 @@ def print_vu_type(name,match,arguments):
 
 def print_vi_type(name,match,arguments):
   print """
-\\multicolumn{11}{|c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
+\\multicolumn{14}{|c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
     str_arg('vimm','imm[31:0]',match,arguments), \
@@ -595,14 +608,14 @@ def print_vr_type(name,match,arguments):
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
 \\multicolumn{2}{c|}{%s} &
-\\multicolumn{2}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
   str_arg('vd','d',match,arguments), \
@@ -630,14 +643,14 @@ def print_vr4_type(name,match,arguments):
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
 \\multicolumn{2}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
   str_arg('vd','d',match,arguments), \
@@ -665,14 +678,16 @@ def print_vseg_type(name,match,arguments):
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
 \\multicolumn{2}{c|}{%s} &
 \\multicolumn{2}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
-\\cline{1-15}
+\\cline{1-21}
   """ % \
   ( \
   str_arg('vd','d',match,arguments), \
@@ -682,10 +697,130 @@ def print_vseg_type(name,match,arguments):
     binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
     str_arg('vseglen', 'seglen',match,arguments), \
     binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
+    binary(yank(match,vpad_ars2_base,vpad_a_size),vpad_a_size), \
+    str_arg('vars2','',match,arguments), \
+    str_arg('vn','n',match,arguments), \
+    binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
+    str_arg('vars1','',match,arguments), \
+    str_arg('vrd','',match,arguments), \
+    str_arg('vpred','pred',match,arguments), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,arguments) \
+  )
+
+def print_vpmem_type(name,match,arguments):
+  print """
+\\multicolumn{1}{|c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-21}
+  """ % \
+  ( \
+  str_arg('vd','d',match,arguments), \
+    str_arg('vs1','s1',match,arguments), \
+    str_arg('vs2','s2',match,arguments), \
+    str_arg('vs3','0',match,arguments), \
+    binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
+    binary(yank(match,vfunct_3_base,vfunct_3_size),vfunct_3_size), \
+    binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
+    str_arg('vrs2','00000000',match,arguments), \
+    str_arg('vn','n',match,arguments), \
+    binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
+    str_arg('vars1','',match,arguments), \
+    binary(yank(match,vpad_prd_base,vpad_p_size),vpad_p_size), \
+    str_arg('vprd','',match,arguments), \
+    str_arg('vpred','0000',match,arguments), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,arguments) \
+  )
+
+def print_vpcmp_type(name,match,arguments):
+  print """
+\\multicolumn{1}{|c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-21}
+  """ % \
+  ( \
+  str_arg('vd','d',match,arguments), \
+    str_arg('vs1','s1',match,arguments), \
+    str_arg('vs2','s2',match,arguments), \
+    str_arg('vs3','0',match,arguments), \
+    binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
+    binary(yank(match,vfunct_3_base,vfunct_3_size),vfunct_3_size), \
+    binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
     str_arg('vrs2','',match,arguments), \
     str_arg('vn','n',match,arguments), \
     str_arg('vrs1','',match,arguments), \
-    str_arg('vrd','',match,arguments), \
+    binary(yank(match,vpad_prd_base,vpad_p_size),vpad_p_size), \
+    str_arg('vprd','',match,arguments), \
+    str_arg('vpred','pred',match,arguments), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,arguments) \
+  )
+
+def print_vpop_type(name,match,arguments):
+  print """
+\\multicolumn{1}{|c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-21}
+  """ % \
+  ( \
+  str_arg('vd','d',match,arguments), \
+    str_arg('vs1','n1',match,arguments), \
+    str_arg('vs2','n2',match,arguments), \
+    str_arg('vs3','n3',match,arguments), \
+    binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
+    binary(yank(match,vfunct_3_base,vfunct_3_size),vfunct_3_size), \
+    binary(yank(match,vfunct_r4_base,vfunct_r4_size),vfunct_r4_size), \
+    binary(yank(match,vpad_prs3_base,vpad_p_size),vpad_p_size), \
+    str_arg('vprs3','',match,arguments), \
+    binary(yank(match,vpad_prs2_base,vpad_p_size),vpad_p_size), \
+    str_arg('vprs2','',match,arguments), \
+    str_arg('vn','n',match,arguments), \
+    binary(yank(match,vpad_prs1_base,vpad_p_size),vpad_p_size), \
+    str_arg('vprs1','',match,arguments), \
+    binary(yank(match,vpad_prd_base,vpad_p_size),vpad_p_size), \
+    str_arg('vprd','',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
     str_hwacha_inst(name,arguments) \
@@ -830,7 +965,7 @@ def print_hwacha_header(*types):
 \\begin{table}[p]
 \\begin{small}
 \\begin{center}
-\\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.8in}@{}p{0.48in}@{}p{0.32in}@{}p{0.08in}@{}p{0.8in}@{}p{0.8in}@{}p{0.4in}@{}p{0.56in}l}
+\\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.50in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.2in}@{}p{0.20in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
 \\\\
 \multicolumn{1}{@{}c@{}}{\instbit{63}} &
 \multicolumn{1}{@{}c@{}}{\instbit{62}} &
@@ -839,81 +974,82 @@ def print_hwacha_header(*types):
 \instbitrange{59}{53} &
 \instbitrange{52}{50} &
 \multicolumn{1}{@{}c@{}}{\instbit{49}} &
-\instbitrange{48}{41} &
-\instbitrange{40}{35} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
 \instbitrange{34}{33} &
 \multicolumn{1}{@{}c@{}}{\instbit{32}} &
-\instbitrange{31}{24} &
-\instbitrange{23}{16} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
 \instbitrange{15}{12} &
 \instbitrange{11}{0} \\\\
-\cline{1-15}
+\cline{1-21}
 """
   if 'vb' in types:
     print """
-\cline{1-15}
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{2}{c|}{funct16} &
+\multicolumn{5}{c|}{funct16} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VB-type \\\\
-\cline{1-15}
+\cline{1-21}
 """
   if 'vj' in types:
     print """
-\cline{1-15}
-\multicolumn{9}{|c|}{imm[31:3]} &
+\multicolumn{12}{|c|}{imm[31:3]} &
 \multicolumn{1}{c|}{c2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VJ-type \\\\
-\cline{1-15}
+\cline{1-21}
   """
   if 'vu' in types:
     print """
-\cline{1-15}
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{funct8} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{funct8} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{funct4} &
 \multicolumn{1}{c|}{opcode} &
 VU-type \\\\
-\cline{1-15}
+\cline{1-21}
 """
   if 'vi' in types:
     print """
-\cline{1-15}
-\multicolumn{11}{|c|}{imm[31:0]} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{14}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{funct4} &
 \multicolumn{1}{c|}{opcode} &
 VI-type \\\\
-\cline{1-15}
+\cline{1-21}
 """
   if 'vr' in types:
     print """
-\cline{1-15}
 \multicolumn{1}{|c|}{d} &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{2} &
 \multicolumn{1}{c|}{f} &
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
-\multicolumn{2}{c|}{funct9} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR-type \\\\
-\cline{1-15}
+\cline{1-21}
 """
   if 'vr4' in types:
     print """
@@ -924,15 +1060,15 @@ VR-type \\\\
 \multicolumn{1}{c|}{funct7} &
 \multicolumn{1}{c|}{funct3} &
 \multicolumn{1}{c|}{f} &
-\multicolumn{1}{c|}{vs3} &
-\multicolumn{2}{c|}{vs2} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{1}{c|}{vs1} &
-\multicolumn{1}{c|}{vd} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{opcode} &
 VR4-type \\\\
-\cline{1-15}
+\cline{1-21}
 """
 
 def print_subtitle(title):
@@ -947,10 +1083,10 @@ def print_subtitle(title):
 def print_hwacha_subtitle(title):
   print """
 &
-\\multicolumn{14}{c}{} & \\\\
+\\multicolumn{20}{c}{} & \\\\
 &
-\\multicolumn{14}{c}{\\bf %s} & \\\\
-\\cline{1-15}
+\\multicolumn{20}{c}{\\bf %s} & \\\\
+\\cline{1-21}
   """ % title
 
 def print_footer(caption):
@@ -1018,6 +1154,13 @@ def print_hwacha_inst(n):
       print_vb_type(n, match[n], arguments[n])
   elif 'vrs3' in arguments[n]:
     print_vr4_type(n, match[n], arguments[n])
+  elif 'vprd' in arguments[n]:
+    if 'vars1' in arguments[n]:
+      print_vpmem_type(n, match[n], arguments[n])
+    elif 'vprs3' in arguments[n]:
+      print_vpop_type(n, match[n], arguments[n])
+    else:
+      print_vpcmp_type(n, match[n], arguments[n])
   else:
     if 'vseglen' in arguments[n]:
       print_vseg_type(n, match[n], arguments[n])
