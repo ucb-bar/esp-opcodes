@@ -31,7 +31,6 @@ $(ISASIM_HWACHA_H): $(ALL_OPCODES) parse-opcodes
 
 $(ISASIM_HWACHA_UT_H): $(ALL_OPCODES) parse-opcodes
 	cat opcodes-hwacha-ut | ./parse-opcodes -c | \
-	sed 's/DECLARE_INSN(/DECLARE_INSN(ut_/g' | \
 	cpp -P -D DECLARE_INSN=DECLARE_INSN | sort -o $@
 
 inst.chisel: $(ALL_OPCODES) parse-opcodes
