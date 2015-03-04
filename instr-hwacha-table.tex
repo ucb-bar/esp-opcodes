@@ -1,0 +1,5075 @@
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Load/Store Instructions (Unit-Stride, Unit-Stride-Segmented)} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLB vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLH vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLW vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLD vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLBU vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLHU vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLWU vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSB vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSH vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSW vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSD vd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGB vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGH vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGW vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGD vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGBU vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGHU vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGWU vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGB vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGH vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGW vd,as1,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{00000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGD vd,as1,seglen \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Load/Store Instructions (Constant-Stride, Constant-Stride-Segmented)} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTB vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTH vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTW vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTD vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTBU vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTHU vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSTWU vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSTB vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSTH vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSTW vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSTD vd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTB vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTH vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTW vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTD vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTBU vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTHU vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGSTWU vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGSTB vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGSTH vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGSTW vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGSTD vd,as1,as2,seglen \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Indexed Load/Store Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXB vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXH vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXW vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXD vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001001} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXBU vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXHU vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001101} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLXWU vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSXB vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSXH vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSXW vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000111} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSXD vd,ss1,vs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXB vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXH vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXW vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXD vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXBU vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXHU vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VLSEGXWU vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGXB vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGXH vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{seglen} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VSSEGXW vd,ss1,vs2,seglen \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Atomic Memory Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{00001} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOSWAP.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{00000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOADD.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{00100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOXOR.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{01100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOAND.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{01000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOOR.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{10000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMIN.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{10100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMAX.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{11000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMINU.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{11100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMAXU.W vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{00001} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOSWAP.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{00000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOADD.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{00100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOXOR.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{01100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOAND.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{01000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOOR.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{10000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMIN.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{10100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMAX.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{11000} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMINU.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{11100} &
+\multicolumn{1}{c|}{aq} &
+\multicolumn{1}{c|}{rl} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{010110111111} & @[!]p VAMOMAXU.D vd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Integer Arithmetic Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{110} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VEIDX vd \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000011} &
+\multicolumn{1}{c|}{110} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFIRST sd,ss1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VADD rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{1000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VADDU rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0100000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VSUB rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VSLL rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VSLT rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VSLTU rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{100} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VXOR rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{101} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VSRL rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0100000} &
+\multicolumn{1}{c|}{101} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VSRA rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{110} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VOR rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{111} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VAND rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VMUL rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VMULH rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VMULHSU rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{011} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VMULHU rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{100} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VDIV rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{101} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VDIVU rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{110} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VREM rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{111} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VREMU rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VMULW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{100} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VDIVW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{101} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VDIVUW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{110} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VREMW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{111} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VREMUW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{3} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR4-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Floating-Point Arithmetic Instructions (Double-Precision)} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100000111111} & @[!]p VFMADD.D rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100010111111} & @[!]p VFMSUB.D rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100100111111} & @[!]p VFNMSUB.D rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100110111111} & @[!]p VFNMADD.D rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFADD.D rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSUB.D rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMUL.D rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFDIV.D rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSQRT.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJ.D rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJN.D rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJX.D rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMIN.D rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMAX.D rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000100} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.D.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.D.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000011100} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCLASS.D rd,rs1 \\
+\cline{1-24}
+  
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Floating-Point Arithmetic Instructions (Single-Precision)} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100000111111} & @[!]p VFMADD.S rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100010111111} & @[!]p VFMSUB.S rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100100111111} & @[!]p VFNMSUB.S rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100110111111} & @[!]p VFNMADD.S rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFADD.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSUB.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMUL.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFDIV.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSQRT.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJ.S rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJN.S rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJX.S rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMIN.S rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMAX.S rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.S.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.S.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000011100} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCLASS.S rd,rs1 \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{3} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR4-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Floating-Point Arithmetic Instructions (Half-Precision)} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100000111111} & @[!]p VFMADD.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100010111111} & @[!]p VFMSUB.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100100111111} & @[!]p VFNMSUB.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100110111111} & @[!]p VFNMADD.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFADD.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSUB.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMUL.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000011} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFDIV.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001011} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSQRT.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJ.H rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJN.H rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSGNJX.H rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMIN.H rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000101} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMAX.H rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.H.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.H.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000011100} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCLASS.H rd,rs1 \\
+\cline{1-24}
+  
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Floating-Point Arithmetic Instructions (Widening-Precision)} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFADD.S.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSUB.S.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMUL.S.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100000111111} & @[!]p VFMADD.D.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100010111111} & @[!]p VFMSUB.D.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100100111111} & @[!]p VFNMSUB.D.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{s3} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{2}{c|}{rs3} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{100110111111} & @[!]p VFNMADD.D.H rd,rs1,rs2,rs3,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFADD.D.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSUB.D.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMUL.D.H rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFADD.D.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000001} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFSUB.D.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFMUL.D.S rd,rs1,rs2,rm \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Floating-Point to/from Integer Conversion Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.W.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.WU.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.L.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.LU.D rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.D.W rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.D.WU rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001001} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.D.L rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001101} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.D.LU rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.W.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000100} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.WU.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.L.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001100} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.LU.S rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.S.W rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000100} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.S.WU rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001000} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.S.L rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001100} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.S.LU rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.W.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.WU.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.L.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.LU.H rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.H.W rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.H.WU rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.H.L rd,rs1,rm \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001110} &
+\multicolumn{1}{c|}{rm} &
+\multicolumn{3}{c|}{000011010} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101000111111} & @[!]p VFCVT.H.LU rd,rs1,rm \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{3} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{2}{c|}{vs3} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR4-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Compare Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VCMPEQ pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{100} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VCMPLT pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{110} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VCMPLTU pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPEQ.D pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPLT.D pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000101} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPLE.D pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPEQ.S pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPLT.S pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPLE.S pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{010} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPEQ.H pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPLT.H pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000010100} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VFCMPLE.H pd,rs1,rs2 \\
+\cline{1-24}
+  
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Predicate Memory Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{101100111111} & @[!]p VPL pd,as1 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{100000000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{111100111111} & @[!]p VPS pd,as1 \\
+\cline{1-24}
+  
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Vector Predicate Arithmetic Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{op} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPOP pd,ps1,ps2,ps3,op \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPCLEAR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{11111111} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPSET pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{01101001} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPXORXOR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{01111101} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPXOROR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{00010100} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPXORAND pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{01101010} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPORXOR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{01111111} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPOROR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{00010101} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPORAND pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{01010110} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPANDXOR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{01010111} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPANDOR pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{1} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{01} &
+\multicolumn{4}{c|}{00000001} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{ps3} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{2}{c|}{ps2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{2}{c|}{0000} &
+\multicolumn{1}{c|}{ps1} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{pd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011000111111} & @[!]p VPANDAND pd,ps1,ps2,ps3 \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{15}{|c|}{imm[31:3]} &
+\multicolumn{1}{c|}{c2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VJ-type \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{funct8} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{funct4} &
+\multicolumn{1}{c|}{opcode} &
+VU-type \\
+\cline{1-24}
+
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{funct4} &
+\multicolumn{1}{c|}{opcode} &
+VI-type \\
+\cline{1-24}
+
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{f} &
+\multicolumn{4}{c|}{funct7} &
+\multicolumn{1}{c|}{funct3} &
+\multicolumn{3}{c|}{funct9} &
+\multicolumn{4}{c|}{vs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VR-type \\
+\cline{1-24}
+
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Scalar Load/Store Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSB sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSH sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSW sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSD sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSBU sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSHU sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLSWU sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSSB sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSSH sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSSW sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{4}{c|}{ss2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSSD sd,ss1,ss2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLAB sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLAH sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLAW sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLAD sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLABU sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLAHU sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000001100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{101100111111} & @s VLAWU sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSAB sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000010} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSAH sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000100} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSAW sd,as1,as2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000001} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000110} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{as2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{2}{c|}{as1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{111100111111} & @s VSAD sd,as1,as2 \\
+\cline{1-24}
+  
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Scalar Arithemtic Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{011010111111} & @s VLUI sd,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{001010111111} & @s VAUIPC sd,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{001000111111} & @s VADDI sd,ss1,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0010} &
+\multicolumn{1}{c|}{001000111111} & @s VSLTI sd,ss1,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0011} &
+\multicolumn{1}{c|}{001000111111} & @s VSLTIU sd,ss1,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0100} &
+\multicolumn{1}{c|}{001000111111} & @s VXORI sd,ss1,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0110} &
+\multicolumn{1}{c|}{001000111111} & @s VORI sd,ss1,imm \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0111} &
+\multicolumn{1}{c|}{001000111111} & @s VANDI sd,ss1,imm \\
+\cline{1-24}
+  
+
+&
+\multicolumn{23}{c}{} & \\
+&
+\multicolumn{23}{c}{\bf Hwacha Control Flow Instructions} & \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{00000000} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{00000000} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{110000111111} & @s VSTOP  \\
+\cline{1-24}
+  
+
+\multicolumn{15}{|c|}{00000000001000000000000000000} &
+\multicolumn{1}{c|}{00} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{1}{c|}{prev} &
+\multicolumn{1}{c|}{succ} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{110000111111} & @s VFENCE  \\
+\cline{1-24}
+  
+
+\multicolumn{15}{|c|}{imm[31:3]} &
+\multicolumn{1}{c|}{c2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{00000000} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{110110111111} & @[!]p VCJAL sd,imm \\
+\cline{1-24}
+  
+
+\multicolumn{15}{|c|}{imm[31:3]} &
+\multicolumn{1}{c|}{c2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{110010111111} & @[!]p VCJALR sd,ss1,imm \\
+\cline{1-24}
+  
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
