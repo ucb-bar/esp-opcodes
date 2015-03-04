@@ -95,15 +95,15 @@
 @vsab     63..61=0 60=0 59..53=1 52..50=0 49..46=0 45=0 44=0 43..42=0 41=0 40..38=0 vars2           vn 31..29=0 vars1           vrd 15..12=0 11..7=0x1E 6..0=0x3f
 
 #vector predicate logical pseudo ops
-#                             funct7   funct3  p/d
-@vpclear     63=1 vs1 vs2 vs3 59..58=1 57..50=0x00 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpset       63=1 vs1 vs2 vs3 59..58=1 57..50=0xff 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpxorxor    63=1 vs1 vs2 vs3 59..58=1 57..50=0x69 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpxoror     63=1 vs1 vs2 vs3 59..58=1 57..50=0x7d 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpxorand    63=1 vs1 vs2 vs3 59..58=1 57..50=0x14 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vporxor     63=1 vs1 vs2 vs3 59..58=1 57..50=0x6a 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vporor      63=1 vs1 vs2 vs3 59..58=1 57..50=0x7f 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vporand     63=1 vs1 vs2 vs3 59..58=1 57..50=0x15 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpandxor    63=1 vs1 vs2 vs3 59..58=1 57..50=0x56 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpandor     63=1 vs1 vs2 vs3 59..58=1 57..50=0x57 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
-@vpandand    63=1 vs1 vs2 vs3 59..58=1 57..50=0x01 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+#                                funct7   funct3  p/d
+@vpclear     63=1 62=0 61=0 60=0 59..58=1 57..50=0x00 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpset       63=1 62=0 61=0 60=0 59..58=1 57..50=0xff 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpxorxor    63=1 62=0 61=0 60=0 59..58=1 57..50=0x69 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpxoror     63=1 62=0 61=0 60=0 59..58=1 57..50=0x7d 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpxorand    63=1 62=0 61=0 60=0 59..58=1 57..50=0x14 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vporxor     63=1 62=0 61=0 60=0 59..58=1 57..50=0x6a 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vporor      63=1 62=0 61=0 60=0 59..58=1 57..50=0x7f 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vporand     63=1 62=0 61=0 60=0 59..58=1 57..50=0x15 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpandxor    63=1 62=0 61=0 60=0 59..58=1 57..50=0x56 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpandor     63=1 62=0 61=0 60=0 59..58=1 57..50=0x57 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+@vpandand    63=1 62=0 61=0 60=0 59..58=1 57..50=0x01 49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f

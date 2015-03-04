@@ -1460,7 +1460,7 @@ def make_hwacha_latex_table():
   print_hwacha_header('vr')
   print_hwacha_subtitle('Hwacha Vector Integer Arithmetic Instructions')
   print_hwacha_insts('veidx', 'vfirst')
-  print_hwacha_insts('vadd', 'vsub', 'vsll', 'vslt', 'vsltu', 'vxor', 'vsrl', 'vsra', 'vor', 'vand')
+  print_hwacha_insts('vadd', 'vaddu', 'vsub', 'vsll', 'vslt', 'vsltu', 'vxor', 'vsrl', 'vsra', 'vor', 'vand')
   print_hwacha_insts('vmul', 'vmulh', 'vmulhsu', 'vmulhu')
   print_hwacha_insts('vdiv', 'vdivu', 'vrem', 'vremu')
   print_hwacha_insts('vmulw', 'vdivw', 'vdivuw', 'vremw', 'vremuw')

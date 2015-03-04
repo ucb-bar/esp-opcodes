@@ -68,8 +68,8 @@ vfcmpeq.h   63=1 vs1 vs2 60=0 59..57=0 56..55=2 54..53=2 52..50=2 49..41=0x14 vr
 
 
 #vector predicate logical ops
-#                             funct7   funct3  p/d
-vpop        63=1 vs1 vs2 vs3 59..58=1 vpfunc   49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
+#                               funct7   funct3  p/d
+vpop        63=1 62=0 61=0 60=0 59..58=1 vpfunc   49=1 48..45=0 vprs3 40..37=0 vprs2 vn 31..28=0 vprs1 23..20=0 vprd vpred 11..7=0x0C 6..0=0x3f
 
 # vector loads and stores
 #                                        3=d
@@ -167,6 +167,7 @@ vsasegb     63..61=0 60=0 59..53=1 vseglen 49..46=0 45=0 44=0 43..42=0 41=0 40..
 
 #vector + vector/scalar     funct7                  funct3  
 vadd       vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vaddu      vd vs1 vs2 60=0 59..53=64               52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
 vsub       vd vs1 vs2 60=0 59..53=32               52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
 vsll       vd vs1 vs2 60=0 59..53=0                52..50=1 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
 vslt       vd vs1 vs2 60=0 59..53=0                52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
