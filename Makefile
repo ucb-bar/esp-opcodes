@@ -4,7 +4,7 @@ ISASIM_H := ../esp-isa-sim/riscv/encoding.h
 ISASIM_HWACHA_H := ../esp-isa-sim/hwacha/opcodes_hwacha.h
 ISASIM_HWACHA_UT_H := ../esp-isa-sim/hwacha/opcodes_hwacha_ut.h
 PK_H := ../riscv-pk/pk/encoding.h
-ENV_H := ../riscv-tests/env/encoding.h
+ENV_H := ../esp-tests/env/encoding.h
 GAS_H := ../esp-gnu-toolchain/binutils/include/opcode/riscv-opc.h
 XCC_H := ../esp-gnu-toolchain/gcc/gcc/config/riscv/riscv-opc.h
 

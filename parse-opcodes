@@ -681,6 +681,46 @@ def print_vi_type(name,match,arguments):
     str_hwacha_inst(name,match,arguments) \
   )
 
+def print_vish_type(name,match,arguments):
+  print """
+\\multicolumn{14}{|c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-24}
+  """ % \
+  ( \
+    str_arg('vimm','',match,arguments), \
+    str_arg('vshamt','shamt',match,arguments), \
+    str_arg('vrs1','ss1',match,arguments), \
+    str_arg('vrd','sd',match,arguments), \
+    binary(yank(match,vfunct_i_base,vfunct_i_size),vfunct_i_size), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,match,arguments) \
+  )
+
+def print_vishw_type(name,match,arguments):
+  print """
+\\multicolumn{15}{|c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-24}
+  """ % \
+  ( \
+    str_arg('vimm','',match,arguments), \
+    str_arg('vshamtw','shamt',match,arguments), \
+    str_arg('vrs1','ss1',match,arguments), \
+    str_arg('vrd','sd',match,arguments), \
+    binary(yank(match,vfunct_i_base,vfunct_i_size),vfunct_i_size), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,match,arguments) \
+  )
+
 def print_vr_type(name,match,arguments):
   print """
 \\multicolumn{1}{|c|}{%s} &
@@ -1523,7 +1563,7 @@ def make_hwacha_latex_table():
   print_hwacha_insts('vlab', 'vlah', 'vlaw', 'vlad', 'vlabu', 'vlahu', 'vlawu', 'vsab', 'vsah', 'vsaw', 'vsad')
   print_hwacha_subtitle('Hwacha Scalar Arithemtic Instructions')
   print_hwacha_insts('vlui', 'vauipc')
-  print_hwacha_insts('vaddi', 'vslti', 'vsltiu', 'vxori', 'vori', 'vandi')#, 'vslli.rv32', 'vsrli.rv32', 'vsrai.rv32')
+  print_hwacha_insts('vaddi', 'vslti', 'vsltiu', 'vxori', 'vori', 'vandi', 'vslli', 'vsrli', 'vsrai', 'vslliw', 'vsrliw', 'vsraiw')
   print_hwacha_subtitle('Hwacha Control Flow Instructions')
   print_hwacha_insts('vstop','vfence')
   print_hwacha_insts('vcjal', 'vcjalr')

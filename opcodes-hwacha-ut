@@ -19,23 +19,23 @@ vcjal       vcimm vcond vn 31..24=0   vrd    vpred 11..7=0x1B 6..0=0x3f
 vcjalr      vcimm vcond vn vrs1       vrd    vpred 11..7=0x19 6..0=0x3f
 
 #vector scalar instructions
-vlui        vimm 31..24=0             vrd 15..12=0  11..7=0x0D 6..0=0x3f
-vauipc      vimm 31..24=0             vrd 15..12=0  11..7=0x05 6..0=0x3f
+vlui        vimm 31..24=0                            vrd 15..12=0  11..7=0x0D 6..0=0x3f
+vauipc      vimm 31..24=0                            vrd 15..12=0  11..7=0x05 6..0=0x3f
 
-vaddi       vimm                 vrs1 vrd 15..12=0  11..7=0x04 6..0=0x3f
-vslti       vimm                 vrs1 vrd 15..12=2  11..7=0x04 6..0=0x3f
-vsltiu      vimm                 vrs1 vrd 15..12=3  11..7=0x04 6..0=0x3f
-vandi       vimm                 vrs1 vrd 15..12=7  11..7=0x04 6..0=0x3f
-vori        vimm                 vrs1 vrd 15..12=6  11..7=0x04 6..0=0x3f
-vxori       vimm                 vrs1 vrd 15..12=4  11..7=0x04 6..0=0x3f
-vslli       63..38=0      vshamt vrs1 vrd 15..12=1  11..7=0x04 6..0=0x3f
-vsrli       63..38=0      vshamt vrs1 vrd 15..12=5  11..7=0x04 6..0=0x3f
-vsrai       63=1 62..38=0 vshamt vrs1 vrd 15..12=5  11..7=0x04 6..0=0x3f
+vaddi       vimm                                vrs1 vrd 15..12=0  11..7=0x04 6..0=0x3f
+vslti       vimm                                vrs1 vrd 15..12=2  11..7=0x04 6..0=0x3f
+vsltiu      vimm                                vrs1 vrd 15..12=3  11..7=0x04 6..0=0x3f
+vandi       vimm                                vrs1 vrd 15..12=7  11..7=0x04 6..0=0x3f
+vori        vimm                                vrs1 vrd 15..12=6  11..7=0x04 6..0=0x3f
+vxori       vimm                                vrs1 vrd 15..12=4  11..7=0x04 6..0=0x3f
+vslli       63..38=0                    vshamt  vrs1 vrd 15..12=1  11..7=0x04 6..0=0x3f
+vsrli       63..38=0                    vshamt  vrs1 vrd 15..12=5  11..7=0x04 6..0=0x3f
+vsrai       63..60=0 59..53=32 52..38=0 vshamt  vrs1 vrd 15..12=5  11..7=0x04 6..0=0x3f
 
-vaddiw      vimm                  vrs1 vrd 15..12=0  11..7=0x06 6..0=0x3f
-vslliw      63..37=0      vshamtw vrs1 vrd 15..12=1  11..7=0x06 6..0=0x3f
-vsrliw      63..37=0      vshamtw vrs1 vrd 15..12=5  11..7=0x06 6..0=0x3f
-vsraiw      63=1 62..37=0 vshamtw vrs1 vrd 15..12=5  11..7=0x06 6..0=0x3f
+vaddiw      vimm                                vrs1 vrd 15..12=0  11..7=0x06 6..0=0x3f
+vslliw      63..37=0                    vshamtw vrs1 vrd 15..12=1  11..7=0x06 6..0=0x3f
+vsrliw      63..37=0                    vshamtw vrs1 vrd 15..12=5  11..7=0x06 6..0=0x3f
+vsraiw      63..60=0 59..53=32 52..37=0 vshamtw vrs1 vrd 15..12=5  11..7=0x06 6..0=0x3f
 
 #vector predicate loads and stores
 #                            pred/data                                 opcode
