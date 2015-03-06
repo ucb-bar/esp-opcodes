@@ -202,26 +202,26 @@ vremw      vd vs1 vs2 60=0 59..53=1                52..50=6 49..41=0 vrs2     vn
 vremuw     vd vs1 vs2 60=0 59..53=1                52..50=7 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
 
 # RV32A
-vamoadd.w  63=1 vs1 vs2 60=0 59..57=0 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoxor.w  63=1 vs1 vs2 60=0 59..57=1 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoor.w   63=1 vs1 vs2 60=0 59..57=2 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoand.w  63=1 vs1 vs2 60=0 59..57=3 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamomin.w  63=1 vs1 vs2 60=0 59..57=4 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamomax.w  63=1 vs1 vs2 60=0 59..57=5 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamominu.w 63=1 vs1 vs2 60=0 59..57=6 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamomaxu.w 63=1 vs1 vs2 60=0 59..57=7 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoswap.w 63=1 vs1 vs2 60=0 59..57=0 56..55=1 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoadd.w  vd vs1 vs2 60=0 59..57=0 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoxor.w  vd vs1 vs2 60=0 59..57=1 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoor.w   vd vs1 vs2 60=0 59..57=2 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoand.w  vd vs1 vs2 60=0 59..57=3 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomin.w  vd vs1 vs2 60=0 59..57=4 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomax.w  vd vs1 vs2 60=0 59..57=5 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamominu.w vd vs1 vs2 60=0 59..57=6 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomaxu.w vd vs1 vs2 60=0 59..57=7 56..55=0 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoswap.w vd vs1 vs2 60=0 59..57=0 56..55=1 vaqrl 52..50=2 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
 
 # RV64A
-vamoadd.d  63=1 vs1 vs2 60=0 59..57=0 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoxor.d  63=1 vs1 vs2 60=0 59..57=1 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoor.d   63=1 vs1 vs2 60=0 59..57=2 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoand.d  63=1 vs1 vs2 60=0 59..57=3 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamomin.d  63=1 vs1 vs2 60=0 59..57=4 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamomax.d  63=1 vs1 vs2 60=0 59..57=5 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamominu.d 63=1 vs1 vs2 60=0 59..57=6 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamomaxu.d 63=1 vs1 vs2 60=0 59..57=7 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
-vamoswap.d 63=1 vs1 vs2 60=0 59..57=0 56..55=1 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoadd.d  vd vs1 vs2 60=0 59..57=0 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoxor.d  vd vs1 vs2 60=0 59..57=1 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoor.d   vd vs1 vs2 60=0 59..57=2 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoand.d  vd vs1 vs2 60=0 59..57=3 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomin.d  vd vs1 vs2 60=0 59..57=4 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomax.d  vd vs1 vs2 60=0 59..57=5 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamominu.d vd vs1 vs2 60=0 59..57=6 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamomaxu.d vd vs1 vs2 60=0 59..57=7 56..55=0 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
+vamoswap.d vd vs1 vs2 60=0 59..57=0 56..55=1 vaqrl 52..50=3 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0B 6..0=0x3f
 
 # F/D EXTENSIONS
 #single                      unused   out fmt  in fmt
