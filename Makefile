@@ -10,7 +10,7 @@ XCC_H := ../esp-gnu-toolchain/gcc/gcc/config/riscv/riscv-opc.h
 
 ALL_OPCODES := opcodes opcodes-pseudo opcodes-rvc opcodes-hwacha opcodes-hwacha-pseudo opcodes-hwacha-ut opcodes-hwacha-ut-pseudo opcodes-custom
 
-install: $(ISASIM_H) $(ISASIM_HWACHA_H) $(ISASIM_HWACHA_UT_H) $(PK_H) $(ENV_H) $(GAS_H) $(XCC_H) inst.chisel instr-table.tex instr-hwacha-table.tex
+install: $(ISASIM_H) $(ISASIM_HWACHA_H) $(ISASIM_HWACHA_UT_H) $(PK_H) $(ENV_H) $(GAS_H) $(XCC_H) inst.chisel inst-hwacha.scala instr-table.tex instr-hwacha-table.tex
 
 $(ISASIM_H) $(PK_H) $(ENV_H): $(ALL_OPCODES) parse-opcodes
 	cp encoding.h $@
@@ -35,6 +35,9 @@ $(ISASIM_HWACHA_UT_H): $(ALL_OPCODES) parse-opcodes
 
 inst.chisel: $(ALL_OPCODES) parse-opcodes
 	cat opcodes opcodes-custom | ./parse-opcodes -chisel > $@
+
+inst-hwacha.scala: $(ALL_OPCODES) parse-opcodes
+	cat opcodes-hwacha opcodes-hwacha-ut | ./parse-opcodes -hchisel > $@
 
 instr-table.tex: $(ALL_OPCODES) parse-opcodes
 	cat opcodes opcodes-pseudo | ./parse-opcodes -tex > $@
