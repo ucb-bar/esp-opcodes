@@ -32,7 +32,7 @@ inst.chisel: $(ALL_OPCODES) parse-opcodes
 	cat opcodes opcodes-custom | ./parse-opcodes -chisel > $@
 
 inst-hwacha.scala: $(ALL_OPCODES) parse-opcodes
-	cat opcodes-hwacha opcodes-hwacha-ut | ./parse-opcodes -hchisel > $@
+	cat opcodes-hwacha opcodes-hwacha-ut opcodes-hwacha-ut-pseudo | ./parse-opcodes -hchisel > $@
 
 instr-table.tex: $(ALL_OPCODES) parse-opcodes
 	cat opcodes opcodes-pseudo | ./parse-opcodes -tex > $@

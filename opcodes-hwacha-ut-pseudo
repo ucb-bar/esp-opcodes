@@ -43,13 +43,13 @@
 #indexed vector load and stores                                                     
 #                   segment  unused   x/f  s/u  width    strided                                opcode
 #                   |        |        |    |    |        |                                         |
-@vlxd     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=3 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
-@vlxw     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
-@vlxwu    63..61=5 60..50=0 49..46=0 45=0 44=1 43..42=2 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
-@vlxh     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
-@vlxhu    63..61=5 60..50=0 49..46=0 45=0 44=1 43..42=1 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
-@vlxb     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
-@vlxbu    63..61=5 60..50=0 49..46=0 45=0 44=1 43..42=0 41=1 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxd     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=3 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxw     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=2 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxwu    63..61=5 60..50=0 49..46=0 45=0 44=1 43..42=2 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxh     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=1 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxhu    63..61=5 60..50=0 49..46=0 45=0 44=1 43..42=1 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxb     63..61=5 60..50=0 49..46=0 45=0 44=0 43..42=0 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
+@vlxbu    63..61=5 60..50=0 49..46=0 45=0 44=1 43..42=0 41=0 vrs2     vn vrs1 vrd vpred 11..7=0x16 6..0=0x3f
                                                                              
 #                   segment  unused   x/f  s/u  width    strided                         opcode
 #                   |        |        |    |    |        |                               |
