@@ -11,7 +11,7 @@ XCC_H := ../esp-gnu-toolchain/gcc/gcc/config/riscv/riscv-opc.h
 
 ALL_OPCODES := opcodes opcodes-pseudo opcodes-rvc opcodes-hwacha opcodes-hwacha-pseudo opcodes-hwacha-ut opcodes-hwacha-ut-pseudo opcodes-custom
 
-install: $(ISASIM_H) $(ISASIM_HWACHA_H) $(ISASIM_HWACHA_UT_H) $(PK_H) $(FESVR_H) $(ENV_H) $(GAS_H) $(XCC_H) inst.chisel inst-hwacha.scala instr-table.tex instr-hwacha-table.tex
+install: $(ISASIM_H) $(ISASIM_HWACHA_H) $(ISASIM_HWACHA_UT_H) $(PK_H) $(FESVR_H) $(ENV_H) $(GAS_H) $(XCC_H) inst.chisel inst-hwacha.scala instr-table.tex priv-instr-table.tex instr-hwacha-table.tex
 
 $(ISASIM_H) $(PK_H) $(FESVR_H) $(ENV_H): $(ALL_OPCODES) parse-opcodes encoding.h
 	cp encoding.h $@
@@ -39,5 +39,8 @@ instr-table.tex: $(ALL_OPCODES) parse-opcodes
 
 instr-hwacha-table.tex: $(ALL_OPCODES) parse-opcodes
 	cat opcodes-hwacha opcodes-hwacha-pseudo opcodes-hwacha-ut opcodes-hwacha-ut-pseudo | ./parse-opcodes -htex > $@
+
+priv-instr-table.tex: $(ALL_OPCODES) parse-opcodes
+	cat opcodes opcodes-pseudo | ./parse-opcodes -privtex > $@
 
 .PHONY : install
