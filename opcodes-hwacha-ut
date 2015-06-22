@@ -8,7 +8,7 @@
 # shamtw, shamt, rm
 
 # vector misc instructions
-veidx    63=1 62..60=0 59..53=2 52..50=6 49..41=0 40..33=0 vn 31..24=0 vrd vpred 11..7=0x0C 6..0=0x3f
+veidx    63=1 vs1 61..60=0 59..53=2 52..50=6 49..41=0 40..33=0 vn vrs1     vrd vpred 11..7=0x0C 6..0=0x3f
 vfirst   63=0 62..60=2 59..53=3 52..50=6 49..41=0 40..33=0 vn vrs1     vrd vpred 11..7=0x0C 6..0=0x3f
 
 #vector control-flow

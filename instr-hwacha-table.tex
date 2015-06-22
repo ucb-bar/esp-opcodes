@@ -1166,7 +1166,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000000} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1182,7 +1182,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000010} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1198,7 +1198,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000100} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1214,7 +1214,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000110} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1230,7 +1230,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000001000} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1246,7 +1246,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000001010} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1262,7 +1262,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000001100} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1278,7 +1278,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000000} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1294,7 +1294,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000010} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1310,7 +1310,7 @@ VR-type \\
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000000} &
-\multicolumn{1}{c|}{seglen} &
+\multicolumn{1}{c|}{000} &
 \multicolumn{3}{c|}{000000100} &
 \multicolumn{4}{c|}{vs2} &
 \multicolumn{1}{c|}{n} &
@@ -1782,7 +1782,7 @@ VR-type \\
   
 
 \multicolumn{1}{|c|}{1} &
-\multicolumn{1}{c|}{0} &
+\multicolumn{1}{c|}{s1} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{1}{c|}{0} &
 \multicolumn{4}{c|}{0000010} &
@@ -1790,10 +1790,10 @@ VR-type \\
 \multicolumn{3}{c|}{000000000} &
 \multicolumn{4}{c|}{00000000} &
 \multicolumn{1}{c|}{n} &
-\multicolumn{3}{c|}{00000000} &
+\multicolumn{3}{c|}{rs1} &
 \multicolumn{2}{c|}{vd} &
 \multicolumn{1}{c|}{pred} &
-\multicolumn{1}{c|}{011000111111} & @[!]p VEIDX vd \\
+\multicolumn{1}{c|}{011000111111} & @[!]p VEIDX vd,rs1 \\
 \cline{1-24}
   
 
@@ -1808,7 +1808,7 @@ VR-type \\
 \multicolumn{1}{c|}{n} &
 \multicolumn{1}{c|}{0000} &
 \multicolumn{2}{c|}{0000} &
-\multicolumn{2}{c|}{vd} &
+\multicolumn{2}{c|}{sd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & @[!]p VFIRST sd,ss1 \\
 \cline{1-24}
@@ -1987,6 +1987,86 @@ VR-type \\
 \multicolumn{2}{c|}{rd} &
 \multicolumn{1}{c|}{pred} &
 \multicolumn{1}{c|}{011000111111} & @[!]p VAND rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VADDW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0100000} &
+\multicolumn{1}{c|}{000} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VSUBW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{001} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VSLLW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0000000} &
+\multicolumn{1}{c|}{101} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VSRLW rd,rs1,rs2 \\
+\cline{1-24}
+  
+
+\multicolumn{1}{|c|}{d} &
+\multicolumn{1}{c|}{s1} &
+\multicolumn{1}{c|}{s2} &
+\multicolumn{1}{c|}{0} &
+\multicolumn{4}{c|}{0100000} &
+\multicolumn{1}{c|}{101} &
+\multicolumn{3}{c|}{000000000} &
+\multicolumn{4}{c|}{rs2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{rs1} &
+\multicolumn{2}{c|}{rd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{011100111111} & @[!]p VSRAW rd,rs1,rs2 \\
 \cline{1-24}
   
 
@@ -5037,6 +5117,14 @@ VR-type \\
 \cline{1-24}
   
 
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{ss1} &
+\multicolumn{2}{c|}{sd} &
+\multicolumn{1}{c|}{0000} &
+\multicolumn{1}{c|}{001100111111} & @s VADDIW sd,ss1,imm \\
+\cline{1-24}
+  
+
 \multicolumn{15}{|c|}{00000000000000000000000000000000} &
 \multicolumn{2}{c|}{shamt} &
 \multicolumn{3}{c|}{ss1} &
@@ -5063,6 +5151,70 @@ VR-type \\
 \multicolumn{1}{c|}{001100111111} & @s VSRAIW sd,ss1,shamt \\
 \cline{1-24}
   
+
+\end{tabular}
+\end{center}
+\end{small}
+
+\label{instr-table}
+\end{table}
+\end{landscape}
+\restoregeometry
+  
+
+\newpage
+
+\newgeometry{margin=1cm}
+\begin{landscape}
+\thispagestyle{empty}
+\begin{table}[p]
+\begin{small}
+\begin{center}
+\begin{tabular}{p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.08in}@{}p{0.10in}@{}p{0.10in}@{}p{0.08in}@{}p{0.08in}@{}p{0.30in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.30in}@{}p{0.1in}@{}p{0.28in}@{}p{0.28in}@{}p{0.08in}@{}p{0.3in}@{}p{0.08in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.4in}@{}p{0.56in}l}
+\\
+\multicolumn{1}{@{}c@{}}{\instbit{63}} &
+\multicolumn{1}{@{}c@{}}{\instbit{62}} &
+\multicolumn{1}{@{}c@{}}{\instbit{61}} &
+\multicolumn{1}{@{}c@{}}{\instbit{60}} &
+\multicolumn{4}{@{}c@{}}{\instbitrange{59}{53}} &
+\instbitrange{52}{50} &
+\multicolumn{1}{@{}c@{}}{\instbit{49}} &
+\instbitrange{48}{45} &
+\instbitrange{44}{41} &
+\instbitrange{40}{38} &
+\multicolumn{1}{@{}c@{}}{\instbit{37}} &
+\instbitrange{36}{35} &
+\instbitrange{34}{33} &
+\multicolumn{1}{@{}c@{}}{\instbit{32}} &
+\instbitrange{31}{29} &
+\multicolumn{1}{@{}c@{}}{\instbit{28}} &
+\instbitrange{27}{24} &
+\instbitrange{23}{20} &
+\instbitrange{19}{16} &
+\instbitrange{15}{12} &
+\instbitrange{11}{0} \\
+\cline{1-24}
+
+
+\multicolumn{15}{|c|}{imm[31:3]} &
+\multicolumn{1}{c|}{c2} &
+\multicolumn{1}{c|}{n} &
+\multicolumn{3}{c|}{vs1} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{pred} &
+\multicolumn{1}{c|}{opcode} &
+VJ-type \\
+\cline{1-24}
+  
+
+\multicolumn{17}{|c|}{imm[31:0]} &
+\multicolumn{3}{c|}{funct8} &
+\multicolumn{2}{c|}{vd} &
+\multicolumn{1}{c|}{funct4} &
+\multicolumn{1}{c|}{opcode} &
+VU-type \\
+\cline{1-24}
+
 
 &
 \multicolumn{23}{c}{} & \\
