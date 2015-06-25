@@ -33,7 +33,7 @@ arglut['svrdhi'] = (22,20)
 arglut['svrdlo'] = (11,7)
 arglut['svard']  = (11,7)
 
-arglut['vseglen'] = (52,50)
+arglut['vseglen'] = (47,45)
 arglut['vpred'] = (15,12)
 arglut['vrd'] = (23,16)
 arglut['vrs1'] = (31,24)
