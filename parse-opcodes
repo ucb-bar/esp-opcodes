@@ -7,6 +7,7 @@ import tokenize
 namelist = []
 match = {}
 mask = {}
+pseudos = {}
 arguments = {}
 
 arglut = {}
@@ -245,7 +246,7 @@ def make_c(match,mask):
   print '#endif'
 
   print '#ifdef DECLARE_CAUSE'
-  for num, name in csrs+csrs32:
+  for num, name in causes:
     print 'DECLARE_CAUSE("%s", CAUSE_%s)' % (name, name.upper().replace(' ', '_'))
   print '#endif'
 
@@ -1657,7 +1658,7 @@ def make_hwacha_latex_table():
   print_hwacha_footer(0)
 
 def print_chisel_insn(name):
-  s = "  def %-18s = Bits(\"b" % name.replace('.', '_').upper()
+  s = "  def %-18s = BitPat(\"b" % name.replace('.', '_').upper()
   for i in range(31, -1, -1):
     if yank(mask[name], i, 1):
       s = '%s%d' % (s, yank(match[name], i, 1))
@@ -1666,7 +1667,7 @@ def print_chisel_insn(name):
   print s + "\")"
 
 def print_hwacha_chisel_insn(name):
-  s = "  def %-18s = Bits(\"b" % name.replace('.', '_').upper()
+  s = "  def %-18s = BitPat(\"b" % name.replace('.', '_').upper()
   for i in range(63, -1, -1):
     if yank(mask[name], i, 1):
       s = '%s%d' % (s, yank(match[name], i, 1))
@@ -1786,9 +1787,11 @@ for line in sys.stdin:
   if not (cover == 0xFFFFFFFFFFFFFFFF or cover == 0xFFFFFFFF or cover == 0xFFFF):
     sys.exit("%s: not all bits are covered(%x)" % (name,cover))
 
-  if not pseudo:
+  if pseudo:
+    pseudos[name] = 1
+  else:
     for name2,match2 in match.iteritems():
-      if (match2 & mymask) == mymatch:
+      if name2 not in pseudos and (match2 & mymask) == mymatch:
         sys.exit("%s and %s overlap" % (name,name2))
 
   mask[name] = mymask
