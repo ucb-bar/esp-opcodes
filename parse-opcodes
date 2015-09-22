@@ -991,7 +991,7 @@ def print_vpmem_type(name,match,arguments):
     binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
     binary(yank(match,vfunct_3_base,vfunct_3_size),vfunct_3_size), \
     binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
-    str_arg('vrs2','00000000',match,arguments), \
+    str_arg('vprs2','ps2',match,arguments), \
     str_arg('vn','n',match,arguments), \
     binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
     str_arg('vars1','as1',match,arguments), \
@@ -1443,7 +1443,7 @@ def print_hwacha_inst(n):
       print_vb_type(n, match[n], arguments[n])
   elif 'vrs3' in arguments[n]:
     print_vr4_type(n, match[n], arguments[n])
-  elif 'vprd' in arguments[n]:
+  elif 'vprd' in arguments[n] or 'vprs2' in arguments[n]:
     if 'vars1' in arguments[n]:
       print_vpmem_type(n, match[n], arguments[n])
     elif 'vprs3' in arguments[n]:
