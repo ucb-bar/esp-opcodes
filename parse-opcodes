@@ -889,6 +889,41 @@ def print_vidx_type(name,match,arguments):
     str_hwacha_inst(name,match,arguments) \
   )
 
+def print_vsmem_type(name,match,arguments):
+  print """
+\\multicolumn{1}{|c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
+\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{2}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} & %s \\\\
+\\cline{1-24}
+  """ % \
+  ( \
+  str_arg('vd','d',match,arguments), \
+    str_arg('vs1','s1',match,arguments), \
+    str_arg('vs2','s2',match,arguments), \
+    str_arg('vs3','0',match,arguments), \
+    binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
+    str_arg('vseglen', 'seglen',match,arguments), \
+    binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
+    str_arg('vrs2','rs2' if 'vs2' in arguments else 'vs2' if (yank(match,63,1)==1) else 'ss2',match,arguments), \
+    str_arg('vn','n',match,arguments), \
+    binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
+    str_arg('vars1','as1',match,arguments), \
+    str_arg('vrd','rd' if 'vd' in arguments else 'vd' if (yank(match,63,1)==1) else 'sd',match,arguments), \
+    str_arg('vpred','pred',match,arguments), \
+    binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
+    str_hwacha_inst(name,match,arguments) \
+  )
 
 def print_vseg_type(name,match,arguments):
   print """
@@ -922,7 +957,7 @@ def print_vseg_type(name,match,arguments):
     str_arg('vn','n',match,arguments), \
     binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
     str_arg('vars1','as1',match,arguments), \
-    str_arg('vrd','vd',match,arguments), \
+    str_arg('vrd','rd' if 'vd' in arguments else 'vd' if (yank(match,63,1)==1) else 'sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
     str_hwacha_inst(name,match,arguments) \
@@ -939,8 +974,7 @@ def print_vfirst_type(name,match,arguments):
 \\multicolumn{3}{c|}{%s} &
 \\multicolumn{4}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
-\\multicolumn{1}{c|}{%s} &
-\\multicolumn{2}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
 \\multicolumn{2}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} & %s \\\\
@@ -956,8 +990,7 @@ def print_vfirst_type(name,match,arguments):
     binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
     str_arg('vrs2','vs2',match,arguments), \
     str_arg('vn','n',match,arguments), \
-    binary(yank(match,vpad_prs1_base,vpad_p_size),vpad_p_size), \
-    str_arg('vprs1','ps1',match,arguments), \
+    str_arg('vrs1','vs1',match,arguments), \
     str_arg('vrd','sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
@@ -1451,7 +1484,10 @@ def print_hwacha_inst(n):
     else:
       print_vpcmp_type(n, match[n], arguments[n])
   elif 'vars1' in arguments[n]:
-    print_vseg_type(n, match[n], arguments[n])
+    if 'vrs2' in arguments[n]:
+      print_vsmem_type(n, match[n], arguments[n])
+    else:
+      print_vseg_type(n, match[n], arguments[n])
   else:
     #if 'x' in n and not 'vd' in arguments[n]:
       #print_vidx_type(n, match[n], arguments[n])
