@@ -1006,7 +1006,8 @@ def print_vpmem_type(name,match,arguments):
 \\multicolumn{4}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{3}{c|}{%s} &
-\\multicolumn{4}{c|}{%s} &
+\\multicolumn{1}{c|}{%s} &
+\\multicolumn{3}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{1}{c|}{%s} &
 \\multicolumn{2}{c|}{%s} &
@@ -1024,6 +1025,7 @@ def print_vpmem_type(name,match,arguments):
     binary(yank(match,vfunct_7_base,vfunct_7_size),vfunct_7_size), \
     binary(yank(match,vfunct_3_base,vfunct_3_size),vfunct_3_size), \
     binary(yank(match,vfunct_r_base,vfunct_r_size),vfunct_r_size), \
+    binary(yank(match,vpad_prs1_base,vpad_p_size),vpad_p_size), \
     str_arg('vprs2','ps2',match,arguments), \
     str_arg('vn','n',match,arguments), \
     binary(yank(match,vpad_ars1_base,vpad_a_size),vpad_a_size), \
@@ -1480,6 +1482,8 @@ def print_hwacha_inst(n):
     if 'vars1' in arguments[n]:
       print_vpmem_type(n, match[n], arguments[n])
     elif 'vprs3' in arguments[n]:
+      print_vpop_type(n, match[n], arguments[n])
+    elif 'clear' in n or 'set' in n:
       print_vpop_type(n, match[n], arguments[n])
     else:
       print_vpcmp_type(n, match[n], arguments[n])
