@@ -88,27 +88,6 @@ csrs = [
   (0xC01, 'time'),
   (0xC02, 'instret'),
 
-  # Nonstandard User R/W
-  (0x0C0, 'stats'),
-
-  # Nonstandard User RO
-  (0xCC0, 'uarch0'),
-  (0xCC1, 'uarch1'),
-  (0xCC2, 'uarch2'),
-  (0xCC3, 'uarch3'),
-  (0xCC4, 'uarch4'),
-  (0xCC5, 'uarch5'),
-  (0xCC6, 'uarch6'),
-  (0xCC7, 'uarch7'),
-  (0xCC8, 'uarch8'),
-  (0xCC9, 'uarch9'),
-  (0xCCA, 'uarch10'),
-  (0xCCB, 'uarch11'),
-  (0xCCC, 'uarch12'),
-  (0xCCD, 'uarch13'),
-  (0xCCE, 'uarch14'),
-  (0xCCF, 'uarch15'),
-
   # Standard Supervisor R/W
   (0x100, 'sstatus'),
   (0x104, 'sie'),
@@ -132,13 +111,11 @@ csrs = [
   (0x303, 'mideleg'),
   (0x304, 'mie'),
   (0x305, 'mtvec'),
-  (0x321, 'mtimecmp'),
   (0x340, 'mscratch'),
   (0x341, 'mepc'),
   (0x342, 'mcause'),
   (0x343, 'mbadaddr'),
   (0x344, 'mip'),
-  (0x345, 'mipi'),
   (0x310, 'mucounteren'),
   (0x311, 'mscounteren'),
   (0x700, 'mucycle_delta'),
@@ -156,12 +133,9 @@ csrs = [
   (0xF11, 'mvendorid'),
   (0xF12, 'marchid'),
   (0xF13, 'mimpid'),
-  (0xF14, 'mcfgaddr'),
-  (0xF15, 'mhartid'),
+  (0xF14, 'mhartid'),
 
   # Nonstandard Machine R/W
-  (0x7C0, 'mtohost'),
-  (0x7C1, 'mfromhost'),
   (0x7C2, 'mreset'),
 ]
 
@@ -172,7 +146,6 @@ csrs32 = [
   (0xC82, 'instreth'),
 
   # Standard Machine R/W
-  (0x361, 'mtimecmph'),
   (0x780, 'mucycle_deltah'),
   (0x781, 'mutime_deltah'),
   (0x782, 'muinstret_deltah'),
@@ -1519,7 +1492,7 @@ def make_supervisor_latex_table():
   print_insts('csrrw', 'csrrs', 'csrrc')
   print_insts('csrrwi', 'csrrsi', 'csrrci')
   print_subtitle('Instructions to Change Privilege Level')
-  print_insts('ecall', 'ebreak', 'eret')
+  print_insts('ecall', 'ebreak', 'uret', 'sret', 'hret', 'mret')
   print_subtitle('Interrupt-Management Instructions')
   print_insts('wfi')
   print_subtitle('Memory-Management Instructions')
