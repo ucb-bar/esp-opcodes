@@ -33,12 +33,38 @@
 #define SSTATUS32_SD        0x80000000
 #define SSTATUS64_SD        0x8000000000000000
 
+#define DCSR_XDEBUGVER      (3U<<30)
+#define DCSR_NDRESET        (1<<29)
+#define DCSR_FULLRESET      (1<<28)
+#define DCSR_HWBPCOUNT      (0xfff<<16)
+#define DCSR_EBREAKM        (1<<15)
+#define DCSR_EBREAKH        (1<<14)
+#define DCSR_EBREAKS        (1<<13)
+#define DCSR_EBREAKU        (1<<12)
+#define DCSR_STOPCYCLE      (1<<10)
+#define DCSR_STOPTIME       (1<<9)
+#define DCSR_CAUSE          (7<<6)
+#define DCSR_DEBUGINT       (1<<5)
+#define DCSR_HALT           (1<<3)
+#define DCSR_STEP           (1<<2)
+#define DCSR_PRV            (3<<0)
+
+#define DCSR_CAUSE_NONE     0
+#define DCSR_CAUSE_SWBP     1
+#define DCSR_CAUSE_HWBP     2
+#define DCSR_CAUSE_DEBUGINT 3
+#define DCSR_CAUSE_STEP     4
+#define DCSR_CAUSE_HALT     5
+
 #define MIP_SSIP            (1 << IRQ_S_SOFT)
 #define MIP_HSIP            (1 << IRQ_H_SOFT)
 #define MIP_MSIP            (1 << IRQ_M_SOFT)
 #define MIP_STIP            (1 << IRQ_S_TIMER)
 #define MIP_HTIP            (1 << IRQ_H_TIMER)
 #define MIP_MTIP            (1 << IRQ_M_TIMER)
+#define MIP_SEIP            (1 << IRQ_S_EXT)
+#define MIP_HEIP            (1 << IRQ_H_EXT)
+#define MIP_MEIP            (1 << IRQ_M_EXT)
 
 #define SIP_SSIP MIP_SSIP
 #define SIP_STIP MIP_STIP
@@ -61,9 +87,9 @@
 #define IRQ_S_TIMER  5
 #define IRQ_H_TIMER  6
 #define IRQ_M_TIMER  7
-#define IRQ_S_DEV    9
-#define IRQ_H_DEV    10
-#define IRQ_M_DEV    11
+#define IRQ_S_EXT    9
+#define IRQ_H_EXT    10
+#define IRQ_M_EXT    11
 #define IRQ_COP      12
 #define IRQ_HOST     13
 

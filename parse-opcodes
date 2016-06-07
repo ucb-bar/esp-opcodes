@@ -124,6 +124,9 @@ csrs = [
   (0x704, 'mscycle_delta'),
   (0x705, 'mstime_delta'),
   (0x706, 'msinstret_delta'),
+  (0x7b0, 'dcsr'),
+  (0x7b1, 'dpc'),
+  (0x7b2, 'dscratch'),
 
   # Standard Machine RO
   (0xF00, 'mcycle'),
@@ -242,157 +245,7 @@ def str_arg(arg0,name,match,arguments):
     return binary(yank(match,start,len),len)
 
 def str_inst(name,arguments):
-  ret = name.replace('.rv32','').upper() + ' '
-  if 'imm12hi' in arguments and 'imm12lo' in arguments:
-    arguments.remove('imm12hi')
-    arguments.remove('imm12lo')
-    arguments.append('imm')
-  if 'bimm12hi' in arguments and 'bimm12lo' in arguments:
-    arguments.remove('bimm12hi')
-    arguments.remove('bimm12lo')
-    arguments.append('imm')
-  if name[:3] == 'csr':
-    arguments.remove('imm12')
-    arguments.remove('rs1')
-    arguments.append('csr')
-    arguments.append('imm' if name[-1] == 'i' else 'rs1')
-  if 'imm12' in arguments:
-    arguments.remove('imm12')
-    arguments.append('imm')
-  if 'imm20' in arguments:
-    arguments.remove('imm20')
-    arguments.append('imm')
-  if 'jimm20' in arguments:
-    arguments.remove('jimm20')
-    arguments.append('imm')
-  if 'zimm' in arguments:
-    arguments.remove('zimm')
-    arguments.append('imm')
-  if 'shamtw' in arguments:
-    arguments.remove('shamtw')
-    arguments.append('shamt')
-  if 'aqrl' in arguments:
-    arguments.remove('aqrl')
-  if 'rm' in arguments:
-    arguments.remove('rm')
-  if 'pred' in arguments:
-    arguments.remove('pred')
-  if 'succ' in arguments:
-    arguments.remove('succ')
-  for idx in range(len(arguments)):
-    ret = ret + arguments[idx]
-    if idx != len(arguments)-1:
-      ret = ret + ','
-  return ret
-  
-def str_hwacha_inst(name,match,arguments):
-  if 'vpred' in arguments and not 'vcond' in arguments:
-    ret = '@[!]p '
-  elif 'vcond' in arguments:
-    if 'stop' in name or 'fence' in name:
-      ret = ''
-    else:
-      ret = '@[!]p '
-  elif 'vimm' in arguments:
-    ret = '@s '
-  else:
-    ret = '@s '
-  ret = ret + name.replace('.rv32','').upper() + ' '
-  if 'vrd' in arguments:
-    arguments.remove('vrd')
-    if 'vd' in arguments:
-      arguments.append('rd')
-    elif(yank(match,63,1)==1):
-      arguments.append('vd')
-      arguments.append('vd')
-    else:
-      arguments.append('sd')
-  if 'vprd' in arguments:
-    arguments.remove('vprd')
-    arguments.append('pd')
-  if 'vrs1' in arguments:
-    arguments.remove('vrs1')
-    if 'vs1' in arguments:
-      arguments.append('rs1')
-    elif(yank(match,62,1)==1):
-      arguments.append('vs1')
-      arguments.append('vs1')
-    else:
-      arguments.append('ss1')
-  if 'vprs1' in arguments:
-    arguments.remove('vprs1')
-    arguments.append('ps1')
-  if 'vars1' in arguments:
-    arguments.remove('vars1')
-    arguments.append('as1')
-  if 'vrs2' in arguments:
-    arguments.remove('vrs2')
-    if 'vs2' in arguments:
-      arguments.append('rs2')
-    elif(yank(match,61,1)==1):
-      arguments.append('vs2')
-      arguments.append('vs2')
-    else:
-      arguments.append('ss2')
-  if 'vprs2' in arguments:
-    arguments.remove('vprs2')
-    arguments.append('ps2')
-  if 'vars2' in arguments:
-    arguments.remove('vars2')
-    arguments.append('as2')
-  if 'vrs3' in arguments:
-    arguments.remove('vrs3')
-    arguments.append('rs3')
-  if 'vprs3' in arguments:
-    arguments.remove('vprs3')
-    arguments.append('ps3')
-  if 'vcimm' in arguments:
-    arguments.remove('vcimm')
-    arguments.append('imm')
-  if 'vimm' in arguments:
-    arguments.remove('vimm')
-    arguments.append('imm')
-  if 'vshamtw' in arguments:
-    arguments.remove('vshamtw')
-    arguments.append('shamt')
-  if 'vshamt' in arguments:
-    arguments.remove('vshamt')
-    arguments.append('shamt')
-  if 'vpfunc' in arguments:
-    arguments.remove('vpfunc')
-    arguments.append('op')
-  if 'vseglen' in arguments:
-    arguments.remove('vseglen')
-    arguments.append('seglen')
-  if 'vrm' in arguments:
-    arguments.remove('vrm')
-    arguments.append('rm')
-  if 'vaqrl' in arguments:
-    arguments.remove('vaqrl')
-  if 'vpred' in arguments:
-    arguments.remove('vpred')
-  if 'vprev' in arguments:
-    arguments.remove('vprev')
-  if 'vsucc' in arguments:
-    arguments.remove('vsucc')
-  if 'vn' in arguments:
-    arguments.remove('vn')
-  if 'vcond' in arguments:
-    arguments.remove('vcond')
-  if 'vd' in arguments:
-    arguments.remove('vd')
-  if 'vs1' in arguments:
-    arguments.remove('vs1')
-  if 'vs2' in arguments:
-    arguments.remove('vs2')
-  if 'vs3' in arguments:
-    arguments.remove('vs3')
-  for idx in range(len(arguments)):
-    ret = ret + arguments[idx]
-    if idx != len(arguments)-1:
-      ret = ret + ','
-  return ret
-
+  return name.replace('.rv32','').upper()
 
 def print_unimp_type(name,match,arguments):
   print """
@@ -664,7 +517,7 @@ def print_vb_type(name,match,arguments):
     binary(yank(match,vfunct_b_base,vfunct_b_size),vfunct_b_size), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vj_type(name,match,arguments):
@@ -686,7 +539,7 @@ def print_vj_type(name,match,arguments):
     str_arg('vrd','sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vu_type(name,match,arguments):
@@ -704,7 +557,7 @@ def print_vu_type(name,match,arguments):
     str_arg('vrd','sd',match,arguments), \
     binary(yank(match,vfunct_i_base,vfunct_i_size),vfunct_i_size), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vi_type(name,match,arguments):
@@ -722,7 +575,7 @@ def print_vi_type(name,match,arguments):
     str_arg('vrd','sd',match,arguments), \
     binary(yank(match,vfunct_i_base,vfunct_i_size),vfunct_i_size), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vish_type(name,match,arguments):
@@ -742,7 +595,7 @@ def print_vish_type(name,match,arguments):
     str_arg('vrd','sd',match,arguments), \
     binary(yank(match,vfunct_i_base,vfunct_i_size),vfunct_i_size), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vishw_type(name,match,arguments):
@@ -762,7 +615,7 @@ def print_vishw_type(name,match,arguments):
     str_arg('vrd','sd',match,arguments), \
     binary(yank(match,vfunct_i_base,vfunct_i_size),vfunct_i_size), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vr_type(name,match,arguments):
@@ -796,7 +649,7 @@ def print_vr_type(name,match,arguments):
     str_arg('vrd','rd' if 'vd' in arguments else 'vd' if (yank(match,63,1)==1) else 'sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vr4_type(name,match,arguments):
@@ -832,7 +685,7 @@ def print_vr4_type(name,match,arguments):
     str_arg('vrd','rd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vidx_type(name,match,arguments):
@@ -866,7 +719,7 @@ def print_vidx_type(name,match,arguments):
     str_arg('vrd','vd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vsmem_type(name,match,arguments):
@@ -902,7 +755,7 @@ def print_vsmem_type(name,match,arguments):
     str_arg('vrd','rd' if 'vd' in arguments else 'vd' if (yank(match,63,1)==1) else 'sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vseg_type(name,match,arguments):
@@ -940,7 +793,7 @@ def print_vseg_type(name,match,arguments):
     str_arg('vrd','rd' if 'vd' in arguments else 'vd' if (yank(match,63,1)==1) else 'sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vfirst_type(name,match,arguments):
@@ -974,7 +827,7 @@ def print_vfirst_type(name,match,arguments):
     str_arg('vrd','sd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vpmem_type(name,match,arguments):
@@ -1014,7 +867,7 @@ def print_vpmem_type(name,match,arguments):
     str_arg('vprd','pd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vpcmp_type(name,match,arguments):
@@ -1050,7 +903,7 @@ def print_vpcmp_type(name,match,arguments):
     str_arg('vprd','pd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vpop_type(name,match,arguments):
@@ -1094,7 +947,7 @@ def print_vpop_type(name,match,arguments):
     str_arg('vprd','pd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vamo_type(name,match,arguments):
@@ -1130,7 +983,7 @@ def print_vamo_type(name,match,arguments):
     str_arg('vrd','vd',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_vfence_type(name,match,arguments):
@@ -1154,7 +1007,7 @@ def print_vfence_type(name,match,arguments):
     str_arg('vsucc','succ',match,arguments), \
     str_arg('vpred','pred',match,arguments), \
     binary(yank(match,vopcode_base,vopcode_size),vopcode_size), \
-    str_hwacha_inst(name,match,arguments) \
+    str_inst(name,arguments) \
   )
 
 def print_header(*types):
