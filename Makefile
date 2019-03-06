@@ -5,19 +5,20 @@ ISASIM_HWACHA_H := ../riscv-isa-sim/hwacha/opcodes_hwacha.h
 ISASIM_HWACHA_UT_H := ../riscv-isa-sim/hwacha/opcodes_hwacha_ut.h
 PK_H := ../riscv-pk/machine/encoding.h
 FESVR_H := ../riscv-fesvr/fesvr/encoding.h
+HWACHA_GAS_H := ../riscv-gnu-toolchain/riscv-binutils-gdb/include/opcode/riscv-opc-hwacha.h
 ENV_H := ../riscv-tests/env/encoding.h
 OPENOCD_H := ../riscv-openocd/src/target/riscv/encoding.h
 
 ALL_OPCODES := opcodes-pseudo opcodes opcodes-rvc opcodes-rvc-pseudo opcodes-custom opcodes-hwacha-pseudo opcodes-hwacha opcodes-hwacha-ut opcodes-hwacha-ut-pseudo
 
-install: $(ISASIM_H) $(ISASIM_HWACHA_H) $(ISASIM_HWACHA_UT_H) $(PK_H) $(FESVR_H) $(ENV_H) inst.chisel instr-table.tex priv-instr-table.tex inst-hwacha.scala instr-hwacha-table.tex
+install: $(ISASIM_H) $(ISASIM_HWACHA_H) $(ISASIM_HWACHA_UT_H) $(PK_H) $(FESVR_H) $(HWACHA_GAS_H) $(ENV_H) inst.chisel instr-table.tex priv-instr-table.tex inst-hwacha.scala instr-hwacha-table.tex
 
 $(ISASIM_H) $(PK_H) $(FESVR_H) $(ENV_H) $(OPENOCD_H): $(ALL_OPCODES) parse-opcodes encoding.h
 	cp encoding.h $@
 	cat opcodes opcodes-rvc-pseudo opcodes-rvc opcodes-custom | ./parse-opcodes -c >> $@
 
-$(GAS_H): $(ALL_OPCODES) parse-opcodes
-	cat $(ALL_OPCODES) | ./parse-opcodes -c > $@
+$(HWACHA_GAS_H): $(ALL_OPCODES) parse-opcodes
+	cat opcodes-hwacha opcodes-hwacha-ut opcodes-hwacha-ut-pseudo | ./parse-opcodes -cpre HWACHA > $@
 
 $(ISASIM_HWACHA_H): $(ALL_OPCODES) parse-opcodes
 	cat opcodes-hwacha opcodes-hwacha-pseudo | ./parse-opcodes -c | \
