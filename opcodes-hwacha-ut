@@ -180,7 +180,9 @@ vand       vd vs1 vs2 60=0 59..53=0                52..50=7 49..41=0 vrs2     vn
 vmerge     vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=1 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
 vmin       vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=2 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
 vmax       vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=3 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
-vclip      vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=4 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vclipw     vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=4 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vcliph     vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=5 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
+vclipb     vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=6 vrs2     vn vrs1 vrd vpred 11..7=0x0C 6..0=0x3f
 
 vaddw      vd vs1 vs2 60=0 59..53=0                52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
 vsubw      vd vs1 vs2 60=0 59..53=32               52..50=0 49..41=0 vrs2     vn vrs1 vrd vpred 11..7=0x0E 6..0=0x3f
