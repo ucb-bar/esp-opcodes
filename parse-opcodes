@@ -61,6 +61,7 @@ arglut['vaqrl'] = (54,53)
 arglut['vrm']   = (52,50)
 arglut['vprev'] = (23,20)
 arglut['vsucc'] = (19,16)
+arglut['vdepth'] = (59,57)
 
 causes = [
   (0x00, 'misaligned fetch'),
