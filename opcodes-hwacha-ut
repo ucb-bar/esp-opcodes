@@ -87,15 +87,6 @@ vlseghu     63..61=4 60=0 59..48=0 vseglen 44=1 43..42=1 41=0 40..33=0       vn 
 vlsegb      63..61=4 60=0 59..48=0 vseglen 44=0 43..42=0 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
 vlsegbu     63..61=4 60=0 59..48=0 vseglen 44=1 43..42=0 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
 
-#depth loads
-vldsegd      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=3 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsegw      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=2 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsegwu     63..61=4 60=1 vdepth 56..48=0 vseglen 44=1 43..42=2 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsegh      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=1 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldseghu     63..61=4 60=1 vdepth 56..48=0 vseglen 44=1 43..42=1 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsegb      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=0 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsegbu     63..61=4 60=1 vdepth 56..48=0 vseglen 44=1 43..42=0 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-
 #                                 segment  unused   x/f  s/u  width    strided                                         opcode
 #                                 |        |        |    |    |        |                                               |
 vlsegstd    63..61=4 60=0 59..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
@@ -105,26 +96,6 @@ vlsegsth    63..61=4 60=0 59..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 
 vlsegsthu   63..61=4 60=0 59..48=0 vseglen 44=1 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
 vlsegstb    63..61=4 60=0 59..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
 vlsegstbu   63..61=4 60=0 59..48=0 vseglen 44=1 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-
-#                                 segment  unused   x/f  s/u  width    strided                                         opcode
-#                                 |        |        |    |    |        |                                               |
-vlsmd       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vlsmw       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vlsmwu      63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=1 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vlsmh       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vlsmhu      63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=1 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vlsmb       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vlsmbu      63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=1 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-
-#                                 segment  unused   x/f  s/u  width    strided                                         opcode
-#                                 |        |        |    |    |        |                                               |
-vldsmd      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsmw      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsmwu     63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=1 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsmh      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsmhu     63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=1 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsmb      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
-vldsmbu     63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=1 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x16 6..0=0x3f
 
 #                                 segment  unused   x/f  s/u  width    strided                                         opcode
 #                                 |        |        |    |    |        |                                               |
@@ -140,7 +111,41 @@ vssegstw    63..61=4 60=0 59..48=0 vseglen 44=0 43..42=2 41=1 40..38=0 vars2 vn 
 vssegsth    63..61=4 60=0 59..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1E 6..0=0x3f
 vssegstb    63..61=4 60=0 59..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1E 6..0=0x3f
 
-vssmd       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1E 6..0=0x3f
+#Start 2D loads/stores
+vldsegd      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=3 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsegw      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=2 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsegwu     63..61=4 60=1 vdepth 56..48=0 vseglen 44=1 43..42=2 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsegh      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=1 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldseghu     63..61=4 60=1 vdepth 56..48=0 vseglen 44=1 43..42=1 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsegb      63..61=4 60=1 vdepth 56..48=0 vseglen 44=0 43..42=0 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsegbu     63..61=4 60=1 vdepth 56..48=0 vseglen 44=1 43..42=0 41=0 40..33=0       vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+
+#                                 segment  unused   x/f  s/u  width    strided                                         opcode
+#                                 |        |        |    |    |        |                                               |
+vlsmd       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vlsmw       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vlsmwu      63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=1 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vlsmh       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vlsmhu      63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=1 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vlsmb       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vlsmbu      63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=1 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+
+#                                 segment  unused   x/f  s/u  width    strided                                         opcode
+#                                 |        |        |    |    |        |                                               |
+vldsmd      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsmw      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsmwu     63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=1 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsmh      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsmhu     63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=1 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsmb      63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+vldsmbu     63..61=4 60=1 vdepth 56=1 55..48=0 vseglen 44=1 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x17 6..0=0x3f
+
+vssmd       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=3 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1F 6..0=0x3f
+vssmw       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=1 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1F 6..0=0x3f
+vssmh       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=2 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1F 6..0=0x3f
+vssmb       63..61=4 60=0 59..57=0 56=1 55..48=0 vseglen 44=0 43..42=0 41=1 40..38=0 vars2 vn 31..29=0 vars1 vrd vpred 11..7=0x1F 6..0=0x3f
+#End 2d loads/stores
+
 #indexed vector load and stores
 #                                 segment  unused   x/f  s/u  width    strided                                         opcode
 #                                 |        |        |    |    |        |                                               |
